@@ -1,1165 +1,351 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ibrahim Al-Murjan — Digital Product Leader. 18 years building and scaling products across healthcare ecosystems.">
 <title>Ibrahim Al-Murjan — Digital Product Leader</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #0C0C0E;
-  --bg-elevated: #141418;
-  --bg-card: #1A1A20;
-  --text-primary: #F0EDE6;
-  --text-secondary: #9A958B;
-  --text-muted: #5E5A52;
-  --accent: #D4A853;
-  --accent-dim: rgba(212,168,83,0.12);
-  --accent-glow: rgba(212,168,83,0.25);
-  --border: rgba(240,237,230,0.06);
-  --serif: 'Instrument Serif', Georgia, serif;
-  --sans: 'DM Sans', sans-serif;
-}
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; font-size: 16px; }
+/* ============================================
+   MOBILE-FIRST: base styles = phone
+   Scale UP with min-width queries
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
-  font-family: var(--sans);
-  background: var(--bg);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0C0C0E; color: #F0EDE6; line-height: 1.6;
+  overflow-x: hidden; -webkit-font-smoothing: antialiased;
 }
-::selection { background: var(--accent); color: var(--bg); }
 img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+::selection { background: #D4A853; color: #0C0C0E; }
+:root {
+  --bg:#0C0C0E; --bg2:#141418; --bg3:#1A1A20;
+  --c1:#F0EDE6; --c2:#9A958B; --c3:#5E5A52;
+  --gold:#D4A853; --gold-dim:rgba(212,168,83,0.12); --gold-glow:rgba(212,168,83,0.25);
+  --line:rgba(240,237,230,0.06);
+  --serif:'Instrument Serif',Georgia,serif; --sans:'DM Sans',sans-serif;
+}
+.wrap { width:100%; max-width:1200px; margin:0 auto; padding:0 20px; }
+.sec { padding:48px 0; }
 
-/* Noise texture overlay */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
-}
+/* --- Nav --- */
+.nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:14px 0;
+  background:rgba(12,12,14,0.85); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line); }
+.nav .wrap { display:flex; justify-content:space-between; align-items:center; }
+.nav-logo { font-family:var(--serif); font-size:1.25rem; text-decoration:none; color:var(--c1); z-index:102; position:relative; }
+.nav-logo span { color:var(--gold); }
+.nav-menu { display:none; }
+.nav-btn { background:none; border:none; cursor:pointer; width:24px; height:18px; position:relative; z-index:102; }
+.nav-btn span { display:block; width:100%; height:2px; background:var(--c1); position:absolute; left:0; transition:all 0.3s; }
+.nav-btn span:nth-child(1){top:0} .nav-btn span:nth-child(2){top:8px} .nav-btn span:nth-child(3){top:16px}
+.nav-btn.on span:nth-child(1){top:8px;transform:rotate(45deg)} .nav-btn.on span:nth-child(2){opacity:0} .nav-btn.on span:nth-child(3){top:8px;transform:rotate(-45deg)}
+.nav-ov { display:none; position:fixed; inset:0; z-index:101; background:rgba(12,12,14,0.98);
+  flex-direction:column; justify-content:center; align-items:center; gap:28px; }
+.nav-ov.on { display:flex; }
+.nav-ov a { color:var(--c2); text-decoration:none; font-size:1.15rem; letter-spacing:0.04em; text-transform:uppercase; transition:color 0.3s; }
+.nav-ov a:hover { color:var(--gold); }
+.pill { background:var(--gold)!important; color:var(--bg)!important; padding:12px 28px; border-radius:100px; font-weight:500; text-transform:none!important; font-size:1rem!important; }
 
-/* Utility */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px); }
-section { padding: clamp(48px, 10vh, 120px) 0; }
+/* --- Buttons --- */
+.btn-g { display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--gold); color:var(--bg); padding:14px 28px; border-radius:100px;
+  text-decoration:none; font-weight:500; font-size:0.95rem; transition:transform 0.3s,box-shadow 0.3s; border:none; cursor:pointer; }
+.btn-g:hover { transform:translateY(-2px); box-shadow:0 8px 24px var(--gold-glow); }
+.btn-o { display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:transparent; color:var(--c1); padding:14px 28px; border-radius:100px;
+  text-decoration:none; font-size:0.95rem; border:1px solid rgba(240,237,230,0.15); transition:all 0.3s; }
+.btn-o:hover { border-color:var(--gold); color:var(--gold); }
 
-/* Navigation */
-nav {
-  position: fixed; top: 0; left: 0; right: 0;
-  z-index: 100;
-  padding: 16px 0;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  background: rgba(12,12,14,0.8);
-  border-bottom: 1px solid var(--border);
-}
-nav .container {
-  display: flex; justify-content: space-between; align-items: center;
-}
-.nav-name {
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  color: var(--text-primary);
-  text-decoration: none;
-  letter-spacing: -0.02em;
-  z-index: 102;
-  position: relative;
-}
-.nav-name span { color: var(--accent); }
-.nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-links a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-.nav-links a:hover { color: var(--accent); }
-.nav-cta {
-  background: var(--accent) !important;
-  color: var(--bg) !important;
-  padding: 10px 24px;
-  border-radius: 100px;
-  font-weight: 500 !important;
-  letter-spacing: 0.02em !important;
-  text-transform: none !important;
-  font-size: 0.9rem !important;
-  transition: transform 0.3s, box-shadow 0.3s !important;
-}
-.nav-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 20px var(--accent-glow);
-  color: var(--bg) !important;
-}
+/* --- Hero --- */
+.hero { padding-top:80px; padding-bottom:32px; }
+.hero-ey { display:inline-flex; align-items:center; gap:8px; font-size:0.75rem;
+  text-transform:uppercase; letter-spacing:0.15em; color:var(--gold); font-weight:500; margin-bottom:16px; }
+.hero-ey::before { content:''; width:20px; height:1px; background:var(--gold); }
+.hero h1 { font-family:var(--serif); font-size:2.2rem; line-height:1.08; letter-spacing:-0.03em; margin-bottom:20px; }
+.hero h1 em { font-style:italic; color:var(--gold); }
+.hero-desc { font-size:0.95rem; color:var(--c2); line-height:1.7; margin-bottom:28px; }
+.hero-btns { display:flex; flex-direction:column; gap:12px; }
+.hero-photo { margin-top:32px; position:relative; width:100%; max-width:260px; }
+.hero-photo img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:16px; border:1px solid var(--line); }
+.hero-photo::after { content:''; position:absolute; inset:0; border-radius:16px;
+  background:linear-gradient(180deg,transparent 50%,rgba(12,12,14,0.5)); pointer-events:none; }
+.bdg { position:absolute; background:var(--bg3); border:1px solid var(--line); border-radius:12px; padding:10px 16px; z-index:2; }
+.bdg-l { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--c3); }
+.bdg-v { font-family:var(--serif); font-size:1.1rem; color:var(--gold); }
+.bdg-a { bottom:-12px; left:-8px; }
+.bdg-y { position:absolute; top:-10px; right:-8px; background:var(--gold); color:var(--bg); border-radius:10px; padding:10px 14px; text-align:center; z-index:2; }
+.bdg-y .n { font-family:var(--serif); font-size:1.3rem; display:block; line-height:1; }
+.bdg-y .l { font-size:0.55rem; text-transform:uppercase; letter-spacing:0.06em; opacity:0.8; }
 
-/* Mobile nav toggle */
-.nav-toggle {
-  display: none;
-  background: none; border: none; cursor: pointer;
-  width: 28px; height: 20px; position: relative; z-index: 102;
-}
-.nav-toggle span {
-  display: block; width: 100%; height: 2px; background: var(--text-primary);
-  transition: all 0.3s; position: absolute; left: 0;
-}
-.nav-toggle span:nth-child(1) { top: 0; }
-.nav-toggle span:nth-child(2) { top: 9px; }
-.nav-toggle span:nth-child(3) { top: 18px; }
-.nav-toggle.active span:nth-child(1) { top: 9px; transform: rotate(45deg); }
-.nav-toggle.active span:nth-child(2) { opacity: 0; }
-.nav-toggle.active span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+/* --- Stats --- */
+.stats { border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:36px 0; }
+.stats-r { display:grid; grid-template-columns:1fr 1fr; gap:24px; text-align:center; }
+.sn { font-family:var(--serif); font-size:1.8rem; color:var(--gold); display:block; line-height:1; margin-bottom:4px; }
+.sl { font-size:0.7rem; color:var(--c2); text-transform:uppercase; letter-spacing:0.08em; }
 
-/* Hero */
-.hero {
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex; align-items: center;
-  position: relative;
-  padding-top: 80px;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -20%; right: -10%;
-  width: 600px; height: 600px;
-  background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
-  filter: blur(80px);
-  pointer-events: none;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-.hero-label {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--accent);
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-.hero-label::before {
-  content: '';
-  width: 24px; height: 1px;
-  background: var(--accent);
-}
-.hero h1 {
-  font-family: var(--serif);
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  color: var(--text-primary);
-  margin-bottom: 24px;
-}
-.hero h1 em { font-style: italic; color: var(--accent); }
-.hero-desc {
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  color: var(--text-secondary);
-  line-height: 1.7;
-  max-width: 520px;
-  margin-bottom: 36px;
-}
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--accent);
-  color: var(--bg);
-  padding: 14px 28px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: all 0.3s;
-  border: none; cursor: pointer;
-  white-space: nowrap;
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
-.btn-secondary {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: transparent;
-  color: var(--text-primary);
-  padding: 14px 28px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 0.95rem;
-  border: 1px solid rgba(240,237,230,0.15);
-  transition: all 0.3s;
-  white-space: nowrap;
-}
-.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+/* --- Section headers --- */
+.se { display:inline-flex; align-items:center; gap:8px; font-size:0.7rem; text-transform:uppercase;
+  letter-spacing:0.15em; color:var(--gold); font-weight:500; margin-bottom:12px; }
+.se::before { content:''; width:20px; height:1px; background:var(--gold); }
+.st { font-family:var(--serif); font-size:1.8rem; letter-spacing:-0.02em; line-height:1.1; margin-bottom:36px; }
+.st em { font-style:italic; color:var(--gold); }
 
-/* Hero visual */
-.hero-visual {
-  position: relative;
-  display: flex; justify-content: center;
-}
-.hero-image-frame {
-  position: relative;
-  width: 380px; height: 460px;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
-.hero-image-frame img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-}
-.hero-image-frame::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(12,12,14,0.6) 100%);
-}
-.hero-badge {
-  position: absolute;
-  bottom: -20px; left: -30px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 16px 24px;
-  backdrop-filter: blur(10px);
-  z-index: 2;
-}
-.hero-badge-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-.hero-badge-value {
-  font-family: var(--serif);
-  font-size: 1.4rem;
-  color: var(--accent);
-}
-.hero-badge-2 {
-  position: absolute;
-  top: -16px; right: -20px;
-  background: var(--accent);
-  color: var(--bg);
-  border-radius: 12px;
-  padding: 14px 20px;
-  z-index: 2;
-  text-align: center;
-}
-.hero-badge-2 .num {
-  font-family: var(--serif);
-  font-size: 1.6rem;
-  display: block;
-  line-height: 1;
-}
-.hero-badge-2 .lbl {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.8;
+/* --- About --- */
+.ab p { font-size:0.95rem; color:var(--c2); line-height:1.8; margin-bottom:16px; }
+.ab p:first-of-type::first-letter { font-family:var(--serif); font-size:3rem; float:left; color:var(--gold); line-height:1; margin-right:10px; margin-top:4px; }
+.sk { display:grid; grid-template-columns:1fr; gap:12px; margin-top:32px; }
+.skc { background:var(--bg2); border:1px solid var(--line); border-radius:12px; padding:18px; }
+.ski { width:32px; height:32px; background:var(--gold-dim); border-radius:8px;
+  display:flex; align-items:center; justify-content:center; margin-bottom:10px; color:var(--gold); }
+.skc h4 { font-family:var(--serif); font-size:1rem; margin-bottom:4px; }
+.skc p { font-size:0.78rem; color:var(--c3); line-height:1.5; }
+
+/* --- Portfolio --- */
+.pf-sec { background:var(--bg2); }
+.pc { background:var(--bg3); border:1px solid var(--line); border-radius:16px; overflow:hidden; margin-bottom:24px; transition:transform 0.4s,box-shadow 0.4s; }
+.pc:hover { transform:translateY(-3px); box-shadow:0 16px 48px rgba(0,0,0,0.3); }
+.pt { padding:24px; }
+.ptag { font-size:0.65rem; text-transform:uppercase; letter-spacing:0.12em; color:var(--gold); font-weight:500; margin-bottom:10px; }
+.pc h3 { font-family:var(--serif); font-size:1.3rem; letter-spacing:-0.02em; margin-bottom:12px; line-height:1.15; }
+.pc p { color:var(--c2); font-size:0.88rem; line-height:1.7; margin-bottom:20px; }
+.pn { display:flex; flex-wrap:wrap; gap:16px; padding-top:16px; border-top:1px solid var(--line); }
+.pn .v { font-family:var(--serif); font-size:1.2rem; color:var(--gold); display:block; line-height:1.1; }
+.pn .l { font-size:0.65rem; color:var(--c3); text-transform:uppercase; letter-spacing:0.06em; }
+
+/* Screenshot gallery */
+.pg { background:var(--bg); padding:16px; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; position:relative; }
+.pg::-webkit-scrollbar { display:none; }
+.pg::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 50% 50%,var(--gold-dim),transparent 70%); opacity:0.3; pointer-events:none; }
+.gr { display:flex; gap:12px; }
+.gr img { flex:0 0 auto; width:55vw; max-width:280px; border-radius:12px;
+  border:1px solid rgba(255,255,255,0.06); box-shadow:0 8px 32px rgba(0,0,0,0.4);
+  transition:transform 0.3s; position:relative; z-index:1; }
+.gr img:hover { transform:translateY(-4px); }
+.sh { text-align:center; padding:8px 0 4px; font-size:0.65rem; color:var(--c3);
+  text-transform:uppercase; letter-spacing:0.08em; position:relative; z-index:1; }
+
+/* --- Timeline --- */
+.tl { position:relative; padding-left:24px; }
+.tl::before { content:''; position:absolute; left:0; top:0; bottom:0; width:1px;
+  background:linear-gradient(180deg,var(--gold),var(--line),transparent); }
+.ti { position:relative; padding-bottom:40px; }
+.ti::before { content:''; position:absolute; left:-28px; top:6px; width:8px; height:8px;
+  border-radius:50%; background:var(--gold); box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--gold); }
+.td { font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold); font-weight:500; margin-bottom:6px; }
+.ti h3 { font-family:var(--serif); font-size:1.15rem; margin-bottom:3px; }
+.ti h4 { font-size:0.85rem; color:var(--c2); font-weight:400; margin-bottom:10px; }
+.ti p { font-size:0.85rem; color:var(--c3); line-height:1.7; }
+
+/* --- Testimonials --- */
+.tg { display:grid; grid-template-columns:1fr; gap:16px; }
+.tc { background:var(--bg2); border:1px solid var(--line); border-radius:16px; padding:24px; position:relative; }
+.tc::before { content:'\201C'; font-family:var(--serif); font-size:3.5rem; color:var(--gold-dim); position:absolute; top:8px; left:18px; line-height:1; }
+.tc blockquote { font-size:0.88rem; color:var(--c2); line-height:1.75; margin-bottom:20px; font-style:italic; position:relative; z-index:1; }
+.tw { display:flex; align-items:center; gap:10px; }
+.tav { width:36px; height:36px; border-radius:50%; background:var(--gold-dim);
+  display:flex; align-items:center; justify-content:center; color:var(--gold); font-family:var(--serif); font-size:0.9rem; flex-shrink:0; }
+.tn { font-weight:500; font-size:0.85rem; }
+.tr { font-size:0.72rem; color:var(--c3); }
+
+/* --- CTA --- */
+.cta { text-align:center; }
+.cta .st { max-width:600px; margin:0 auto 16px; }
+.cta-sub { color:var(--c2); margin-bottom:32px; font-size:0.95rem; }
+.cta-b { display:flex; flex-direction:column; align-items:center; gap:12px; }
+
+/* --- Footer --- */
+.ft { border-top:1px solid var(--line); padding:32px 0; text-align:center; }
+.ft p { color:var(--c3); font-size:0.75rem; }
+
+/* --- Animations --- */
+.an { opacity:0; transform:translateY(24px); transition:opacity 0.6s ease,transform 0.6s ease; }
+.an.vi { opacity:1; transform:translateY(0); }
+.d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
+
+/* ============================================
+   TABLET: min-width 600px
+   ============================================ */
+@media(min-width:600px){
+  .wrap{padding:0 32px}
+  .sec{padding:64px 0}
+  .hero h1{font-size:2.8rem}
+  .hero-btns{flex-direction:row}
+  .hero-photo{max-width:300px}
+  .stats-r{grid-template-columns:repeat(4,1fr)}
+  .sn{font-size:2.2rem} .sl{font-size:0.75rem}
+  .sk{grid-template-columns:1fr 1fr}
+  .st{font-size:2.2rem}
+  .pt{padding:32px}
+  .pc h3{font-size:1.5rem}
+  .gr img{width:40vw;max-width:300px}
+  .sh{display:none}
+  .tg{grid-template-columns:1fr 1fr}
+  .cta-b{flex-direction:row;justify-content:center}
 }
 
-/* Stats bar */
-.stats-bar {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 40px 0;
-}
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  text-align: center;
-}
-.stat-item { position: relative; }
-.stat-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: -16px; top: 10%; height: 80%;
-  width: 1px;
-  background: var(--border);
-}
-.stat-number {
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  color: var(--accent);
-  display: block;
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.stat-label {
-  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+/* ============================================
+   DESKTOP: min-width 960px
+   ============================================ */
+@media(min-width:960px){
+  .wrap{padding:0 48px}
+  .sec{padding:96px 0}
+  .nav-btn{display:none}
+  .nav-menu{display:flex;gap:28px;align-items:center}
+  .nav-menu a{color:var(--c2);text-decoration:none;font-size:0.8rem;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.3s}
+  .nav-menu a:hover{color:var(--gold)}
+  .nav-menu .pill{background:var(--gold);color:var(--bg);padding:10px 22px;border-radius:100px;font-weight:500;text-transform:none;font-size:0.85rem;transition:transform 0.3s,box-shadow 0.3s}
+  .nav-menu .pill:hover{transform:translateY(-1px);box-shadow:0 4px 16px var(--gold-glow)}
+  .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .hero{padding-top:100px;padding-bottom:48px}
+  .hero h1{font-size:clamp(2.8rem,4.5vw,4.2rem)}
+  .hero-desc{font-size:1.05rem}
+  .hero-photo{margin-top:0;max-width:360px}
+  .bdg-a{bottom:-16px;left:-24px;padding:14px 20px} .bdg-v{font-size:1.3rem}
+  .bdg-y{top:-14px;right:-16px;padding:12px 18px} .bdg-y .n{font-size:1.5rem}
+  .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .ab p{font-size:1.02rem}
+  .pt{padding:40px} .pc h3{font-size:1.7rem} .pc p{font-size:0.92rem}
+  .gr img{width:auto;max-width:none;height:380px}
+  .pg{padding:28px}
+  .sn{font-size:2.8rem} .sl{font-size:0.8rem}
+  .st{font-size:2.8rem;margin-bottom:48px}
+  .tc{padding:36px} .tc blockquote{font-size:0.95rem}
+  .tl{padding-left:32px} .ti h3{font-size:1.35rem}
 }
 
-/* Section headers */
-.section-header { margin-bottom: 48px; }
-.section-eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--accent);
-  margin-bottom: 16px;
-  font-weight: 500;
-}
-.section-eyebrow::before {
-  content: '';
-  width: 24px; height: 1px;
-  background: var(--accent);
-}
-.section-title {
-  font-family: var(--serif);
-  font-size: clamp(1.8rem, 4vw, 3.2rem);
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  max-width: 600px;
-}
-.section-title em { font-style: italic; color: var(--accent); }
-
-/* About */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-.about-text p {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-.about-text p:first-of-type::first-letter {
-  font-family: var(--serif);
-  font-size: 3.5rem;
-  float: left;
-  color: var(--accent);
-  line-height: 1;
-  margin-right: 12px;
-  margin-top: 4px;
-}
-.principles-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 32px;
-}
-.principle {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px;
-  transition: all 0.4s;
-}
-.principle:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
-.principle-icon {
-  width: 36px; height: 36px;
-  background: var(--accent-dim);
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 12px;
-  color: var(--accent);
-  font-size: 1rem;
-}
-.principle h4 {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  margin-bottom: 6px;
-  color: var(--text-primary);
-}
-.principle p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-/* Portfolio */
-.portfolio { background: var(--bg-elevated); }
-.portfolio-grid { display: grid; gap: 32px; }
-.portfolio-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  overflow: hidden;
-  transition: all 0.5s;
-}
-.portfolio-card:hover {
-  border-color: rgba(212,168,83,0.15);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-.portfolio-content {
-  padding: clamp(28px, 4vw, 48px);
-  display: flex; flex-direction: column; justify-content: center;
-}
-.portfolio-tag {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-.portfolio-card h3 {
-  font-family: var(--serif);
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-  letter-spacing: -0.02em;
-  margin-bottom: 14px;
-  line-height: 1.15;
-}
-.portfolio-card p {
-  color: var(--text-secondary);
-  font-size: clamp(0.85rem, 1.5vw, 0.92rem);
-  line-height: 1.7;
-  margin-bottom: 24px;
-  max-width: 720px;
-}
-.portfolio-metrics {
-  display: flex; gap: 20px; flex-wrap: wrap;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-.metric .metric-val {
-  font-family: var(--serif);
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: var(--accent);
-  display: block;
-  line-height: 1.1;
-}
-.metric .metric-lbl {
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* Portfolio screenshots - full width gallery */
-.portfolio-screenshots {
-  background: var(--bg);
-  padding: clamp(20px, 3vw, 40px);
-  position: relative;
-  overflow: hidden;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.portfolio-screenshots::-webkit-scrollbar { display: none; }
-.portfolio-screenshots::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 50% 50%, var(--accent-dim), transparent 70%);
-  opacity: 0.3;
-  pointer-events: none;
-}
-.screenshot-row {
-  display: flex;
-  gap: clamp(12px, 2vw, 20px);
-  align-items: stretch;
-  position: relative;
-  z-index: 1;
-  min-width: min-content;
-}
-.screenshot-row img {
-  height: clamp(280px, 40vw, 420px);
-  width: auto;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.screenshot-row img:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
-.scroll-hint {
-  display: none;
-  text-align: center;
-  padding: 8px 0 0;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-}
-
-/* Timeline */
-.timeline-list { position: relative; padding-left: 32px; }
-.timeline-list::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 1px;
-  background: linear-gradient(180deg, var(--accent), var(--border), transparent);
-}
-.timeline-item {
-  position: relative;
-  padding-bottom: 48px;
-}
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -36px; top: 8px;
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--accent);
-}
-.timeline-date {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--accent);
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-.timeline-item h3 {
-  font-family: var(--serif);
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  margin-bottom: 4px;
-}
-.timeline-item h4 {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-.timeline-item p {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 560px;
-}
-
-/* Testimonials */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.testimonial-card {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: clamp(24px, 4vw, 40px);
-  position: relative;
-  transition: all 0.4s;
-}
-.testimonial-card:hover { border-color: rgba(212,168,83,0.12); }
-.testimonial-card::before {
-  content: '\201C';
-  font-family: var(--serif);
-  font-size: 5rem;
-  color: var(--accent-dim);
-  position: absolute;
-  top: 12px; left: 24px;
-  line-height: 1;
-}
-.testimonial-text {
-  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
-  color: var(--text-secondary);
-  line-height: 1.75;
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 1;
-  font-style: italic;
-}
-.testimonial-author { display: flex; align-items: center; gap: 12px; }
-.testimonial-avatar {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: var(--accent-dim);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--accent);
-  font-family: var(--serif);
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-.testimonial-name {
-  font-weight: 500;
-  font-size: 0.88rem;
-  color: var(--text-primary);
-}
-.testimonial-role {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-/* CTA */
-.cta-section {
-  text-align: center;
-  position: relative;
-}
-.cta-section::before {
-  content: '';
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px; height: 350px;
-  background: radial-gradient(circle, var(--accent-dim), transparent 70%);
-  filter: blur(60px);
-  pointer-events: none;
-}
-.cta-section .section-title {
-  max-width: 700px;
-  margin: 0 auto 20px;
-}
-.cta-desc {
-  color: var(--text-secondary);
-  max-width: 500px;
-  margin: 0 auto 40px;
-  font-size: 1.05rem;
-}
-.cta-links {
-  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
-  position: relative; z-index: 1;
-}
-
-/* Footer */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 40px 0;
-  text-align: center;
-}
-footer p {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-}
-
-/* Animations */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-up.visible { opacity: 1; transform: translateY(0); }
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-
-/* ========== RESPONSIVE ========== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-  .hero-desc { margin-left: auto; margin-right: auto; }
-  .hero-actions { justify-content: center; }
-  .hero-visual { order: -1; }
-  .hero-image-frame { width: 280px; height: 340px; }
-  .hero-badge { bottom: -16px; left: 0; }
-  .hero-badge-2 { top: -12px; right: 0; }
-  .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .screenshot-row img { height: 320px; }
-  .scroll-hint { display: block; }
-  .testimonials-grid { grid-template-columns: 1fr; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .stat-item:nth-child(2)::after { display: none; }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  body { font-size: 15px; }
-  .container { padding: 0 20px; }
-  section { padding: clamp(40px, 8vh, 80px) 0; }
-
-  /* Mobile nav */
-  .nav-links {
-    display: none;
-    position: fixed; inset: 0;
-    background: rgba(12,12,14,0.98);
-    flex-direction: column;
-    justify-content: center; align-items: center;
-    gap: 28px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    z-index: 101;
-  }
-  .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.2rem; }
-  .nav-toggle { display: block; }
-
-  /* Hero mobile */
-  .hero { min-height: auto; padding-top: 80px; padding-bottom: 40px; }
-  .hero-label { justify-content: center; }
-  .hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
-  .hero-desc { font-size: 0.95rem; }
-  .hero-image-frame { width: 220px; height: 280px; }
-  .hero-badge, .hero-badge-2 { display: none; }
-  .hero-actions { flex-direction: column; align-items: center; }
-  .btn-primary, .btn-secondary { width: 100%; max-width: 280px; justify-content: center; padding: 14px 24px; }
-
-  /* Stats mobile */
-  .stats-bar { padding: 32px 0; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-  .stat-item::after { display: none !important; }
-  .stat-number { font-size: 1.8rem; }
-
-  /* About mobile */
-  .about-text p { font-size: 0.95rem; }
-  .about-text p:first-of-type::first-letter { font-size: 2.8rem; }
-  .principles-grid { grid-template-columns: 1fr; gap: 12px; }
-  .principle { padding: 18px; }
-
-  /* Portfolio mobile */
-  .portfolio-content { padding: 24px; }
-  .portfolio-card h3 { font-size: 1.3rem; }
-  .portfolio-card p { font-size: 0.88rem; margin-bottom: 20px; }
-  .portfolio-screenshots { padding: 16px; }
-  .screenshot-row img { height: 240px; border-radius: 12px; }
-  .scroll-hint { display: block; }
-  .portfolio-metrics { gap: 16px; }
-  .metric .metric-val { font-size: 1.2rem; }
-
-  /* Timeline mobile */
-  .timeline-list { padding-left: 24px; }
-  .timeline-item::before { left: -28px; width: 8px; height: 8px; }
-  .timeline-item h3 { font-size: 1.15rem; }
-  .timeline-item p { font-size: 0.85rem; }
-
-  /* Testimonials mobile */
-  .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
-  .testimonial-card { padding: 24px; }
-  .testimonial-card::before { font-size: 3.5rem; top: 8px; left: 18px; }
-  .testimonial-text { font-size: 0.88rem; margin-bottom: 20px; }
-
-  /* CTA mobile */
-  .cta-links { flex-direction: column; align-items: center; }
-  .cta-links a { width: 100%; max-width: 320px; justify-content: center; }
-  .cta-desc { font-size: 0.95rem; }
-}
-
-/* Small mobile */
-@media (max-width: 380px) {
-  .hero h1 { font-size: 1.8rem; }
-  .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .stat-number { font-size: 1.5rem; }
-  .stat-label { font-size: 0.65rem; }
-  .screenshot-row img { height: 200px; }
-  .portfolio-metrics { flex-direction: column; gap: 12px; }
+/* ============================================
+   LARGE DESKTOP: min-width 1200px
+   ============================================ */
+@media(min-width:1200px){
+  .hero h1{font-size:4.2rem}
+  .gr img{height:420px}
+  .pg{padding:36px}
 }
 </style>
 </head>
 <body>
 
-<!-- Navigation -->
-<nav>
-  <div class="container">
-    <a href="#" class="nav-name">abe<span>.</span></a>
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#experience">Experience</a>
-      <a href="#testimonials">References</a>
-      <a href="mailto:abealmurjan@gmail.com" class="nav-cta">Let's Connect</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+<nav class="nav"><div class="wrap">
+  <a href="#" class="nav-logo">abe<span>.</span></a>
+  <div class="nav-menu">
+    <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
+    <a href="mailto:abealmurjan@gmail.com" class="pill">Let's Connect</a>
   </div>
-</nav>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <div class="hero-label">Digital Product Leader</div>
-        <h1>18 years shipping<br>products that <em>scale</em></h1>
-        <p class="hero-desc">
-          I'm Ibrahim Al-Murjan. I build and scale digital platforms across complex, multi-site ecosystems — consumer apps, AI tools, enterprise workflow systems. Products from zero to millions of users, teams from the ground up.
-        </p>
-        <div class="hero-actions">
-          <a href="mailto:abealmurjan@gmail.com" class="btn-primary">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Get in Touch
-          </a>
-          <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-secondary">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-image-frame">
-          <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7bc9c342-47bf-48e0-bd09-e07d94b646dc/5+-+Abe.jpeg" alt="Ibrahim Al-Murjan">
-        </div>
-        <div class="hero-badge">
-          <div class="hero-badge-label">Award</div>
-          <div class="hero-badge-value">Mars Global<br>Innovation Winner</div>
-        </div>
-        <div class="hero-badge-2">
-          <span class="num">18+</span>
-          <span class="lbl">Years in Product</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Stats Bar -->
-<div class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item fade-up">
-        <span class="stat-number">1M+</span>
-        <span class="stat-label">App Users</span>
-      </div>
-      <div class="stat-item fade-up stagger-1">
-        <span class="stat-number">75M+</span>
-        <span class="stat-label">Messages Exchanged</span>
-      </div>
-      <div class="stat-item fade-up stagger-2">
-        <span class="stat-number">500K+</span>
-        <span class="stat-label">AI Dictations</span>
-      </div>
-      <div class="stat-item fade-up stagger-3">
-        <span class="stat-number">4.8★</span>
-        <span class="stat-label">User Satisfaction</span>
-      </div>
-    </div>
-  </div>
+  <button class="nav-btn" id="nb" aria-label="Menu"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="nav-ov" id="no">
+  <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
+  <a href="mailto:abealmurjan@gmail.com" class="pill">Let's Connect</a>
 </div>
 
-<!-- About -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text fade-up">
-        <div class="section-header">
-          <div class="section-eyebrow">Background</div>
-          <h2 class="section-title">How I <em>work</em></h2>
-        </div>
-        <p>I started on the ground floor — training hospital teams on software, learning every operational pain point firsthand. That shaped how I approach product: start with the real problem, build for the people using it, measure what matters.</p>
-        <p>Since then I've led product teams responsible for consumer apps, AI clinical tools, telehealth platforms, and enterprise workflow systems across a network of 1,000+ locations. I've shipped products in as little as 6 weeks and scaled them to millions of users.</p>
-      </div>
-      <div class="fade-up stagger-2">
-        <div class="principles-grid">
-          <div class="principle">
-            <div class="principle-icon">⚡</div>
-            <h4>0 → 1 Launches</h4>
-            <p>Taken multiple products from concept to production — including one shipped in 6 weeks.</p>
-          </div>
-          <div class="principle">
-            <div class="principle-icon">📐</div>
-            <h4>Team Building</h4>
-            <p>Built and scaled cross-functional product teams across engineering, design, and operations.</p>
-          </div>
-          <div class="principle">
-            <div class="principle-icon">↗</div>
-            <h4>Scale</h4>
-            <p>Products deployed across 1,000+ locations serving millions of end users.</p>
-          </div>
-          <div class="principle">
-            <div class="principle-icon">◉</div>
-            <h4>AI & Innovation</h4>
-            <p>Shipped production AI tools — dictation, triage, clinical automation — in a regulated healthcare environment.</p>
-          </div>
-        </div>
-      </div>
+<section class="hero sec"><div class="wrap"><div class="hero-inner">
+  <div>
+    <div class="hero-ey">Digital Product Leader</div>
+    <h1>18 years shipping<br>products that <em>scale</em></h1>
+    <p class="hero-desc">I'm Ibrahim Al-Murjan. I build and scale digital platforms across complex, multi-site ecosystems — consumer apps, AI tools, enterprise workflow systems. Products from zero to millions of users, teams from the ground up.</p>
+    <div class="hero-btns">
+      <a href="mailto:abealmurjan@gmail.com" class="btn-g">✉ Get in Touch</a>
+      <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-o">LinkedIn</a>
     </div>
   </div>
-</section>
-
-<!-- Portfolio -->
-<section id="portfolio" class="portfolio">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="section-eyebrow">Product Portfolio</div>
-      <h2 class="section-title">What I've <em>shipped</em></h2>
-    </div>
-    <div class="portfolio-grid">
-
-      <!-- myVCA App -->
-      <div class="portfolio-card fade-up">
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Consumer Mobile App</div>
-          <h3>Consumer Healthcare App</h3>
-          <p>Consumer mobile app for a 1,000+ location veterinary network. Handles check-in, document signing, digital checkout, and 24/7 care access. Grew to over 1M active users with a 4.8-star rating.</p>
-          <div class="portfolio-metrics">
-            <div class="metric"><span class="metric-val">1M+</span><span class="metric-lbl">Active Users</span></div>
-            <div class="metric"><span class="metric-val">4.8</span><span class="metric-lbl">App Store Rating</span></div>
-          </div>
-        </div>
-        <div class="portfolio-screenshots">
-          <div class="screenshot-row">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/29c98f01-9696-4ad4-a6d2-28f03ebef127/myvca-1.jpg" alt="myVCA App - Home Screen" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d553794d-a360-45c9-b5b5-35a8f90de84a/myvca-2.jpg" alt="myVCA App - Pet Profile" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/b1a24247-615c-465a-a4af-dbc7aea42ccd/myvca-4.jpg" alt="myVCA App - Features" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/faaae44c-9df9-4627-9524-913c66503bba/myvca-4+%281%29.jpg" alt="myVCA App - Checkout" loading="lazy">
-          </div>
-          <div class="scroll-hint">← Swipe to see more →</div>
-        </div>
-      </div>
-
-      <!-- Scribe AI -->
-      <div class="portfolio-card fade-up">
-        <div class="portfolio-content">
-          <div class="portfolio-tag">AI-Powered Healthcare</div>
-          <h3>AI Medical Dictation</h3>
-          <p>AI-powered dictation tool that cut manual medical record writing by 90%. Doctors dictate, the system transcribes and pushes structured notes into the practice management system. Concept to production in 6 weeks.</p>
-          <div class="portfolio-metrics">
-            <div class="metric"><span class="metric-val">500K+</span><span class="metric-lbl">Dictations in Year 1</span></div>
-            <div class="metric"><span class="metric-val">95%</span><span class="metric-lbl">Accuracy Rate</span></div>
-            <div class="metric"><span class="metric-val">6 wks</span><span class="metric-lbl">Built & Launched</span></div>
-          </div>
-        </div>
-        <div class="portfolio-screenshots">
-          <div class="screenshot-row">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/52c4c0f5-494d-4a0a-b471-40533a7a1678/scribe+-+1.jpg" alt="Scribe AI - Dictation" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/cb27256c-121c-4db8-ab77-2e00219b07e9/scribe+-+2.jpg" alt="Scribe AI - Transcription" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/be26933b-e195-44c9-8c71-673f638a1f54/scribe+-+3.jpg" alt="Scribe AI - Records" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/63ee0a82-1c52-4c4d-9b60-a5919a0a4350/scribe+-+4.jpg" alt="Scribe AI - Dashboard" loading="lazy">
-          </div>
-          <div class="scroll-hint">← Swipe to see more →</div>
-        </div>
-      </div>
-
-      <!-- Telehealth -->
-      <div class="portfolio-card fade-up">
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Virtual Care Platform</div>
-          <h3>Telehealth & Live Chat</h3>
-          <p>In-app teletriage chat launched in 2018, expanded to full video and 24/7 access in 2020. Omnichannel — web and mobile, integrated with medical records, real-time clinical data.</p>
-          <div class="portfolio-metrics">
-            <div class="metric"><span class="metric-val">24/7</span><span class="metric-lbl">Around-the-Clock</span></div>
-            <div class="metric"><span class="metric-val">4.8★</span><span class="metric-lbl">Client Satisfaction</span></div>
-          </div>
-        </div>
-        <div class="portfolio-screenshots">
-          <div class="screenshot-row">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/01657c15-227d-4558-a55d-fd1d7c59a0f1/telehealth-1.jpg" alt="Telehealth Interface" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/710bce2c-bdc2-451e-9846-2974f70ce605/telehealth-2.jpg" alt="Live Chat" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/2246e5d4-91f3-4d9a-9ef6-d92face85ead/telehealth-3.jpg" alt="Telehealth Chat" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/9fa280a2-e1c6-49ae-a83e-1bbbef890caa/telehealth-4.jpg" alt="Telehealth Video" loading="lazy">
-          </div>
-          <div class="scroll-hint">← Swipe to see more →</div>
-        </div>
-      </div>
-
-      <!-- Retriever+ & SMS -->
-      <div class="portfolio-card fade-up">
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Enterprise Staff Platform</div>
-          <h3>Staff Enablement & Direct Messaging</h3>
-          <p>Mobile staff platform paired with a 2-way SMS system for client communication. Texting product launched in 2014. Digitized front-desk workflows, eliminated paper processes, and created a direct engagement channel across the full network.</p>
-          <div class="portfolio-metrics">
-            <div class="metric"><span class="metric-val">5M+</span><span class="metric-lbl">Client Engagements</span></div>
-            <div class="metric"><span class="metric-val">75M+</span><span class="metric-lbl">Texts Exchanged</span></div>
-            <div class="metric"><span class="metric-val">10M+</span><span class="metric-lbl">Sheets Saved</span></div>
-          </div>
-        </div>
-        <div class="portfolio-screenshots">
-          <div class="screenshot-row">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7a638a63-9496-4127-8825-15e18438d58d/companion-1.jpg" alt="Retriever+ Check-in" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/6df8c33d-a24c-4ebb-9c3e-c6078fe5f6b6/companion-2.jpg" alt="Retriever+ Documents" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d6f14579-5759-409c-bb5e-4037aa4563b1/companion-4.jpg" alt="Retriever+ Dashboard" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/71581fce-b299-4e2f-8cc6-d25b03e322b5/sms-1.jpg" alt="Direct SMS" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f92b351c-a683-44e1-b590-76fa7eec72fa/sms-2.jpg" alt="SMS Conversation" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/bd249175-3787-4866-86fe-2ddf991a2b37/sms-3.jpg" alt="SMS Photos" loading="lazy">
-          </div>
-          <div class="scroll-hint">← Swipe to see more →</div>
-        </div>
-      </div>
-
-      <!-- Virtual Waiting Room -->
-      <div class="portfolio-card fade-up">
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Digital Operations</div>
-          <h3>Virtual Waiting Room</h3>
-          <p>First-of-its-kind fully integrated digital front door with real-time wait times and automated queue management. Reduced lobby crowding, freed up staff, and delivered a stress-free client experience.</p>
-          <div class="portfolio-metrics">
-            <div class="metric"><span class="metric-val">1,000+</span><span class="metric-lbl">Hospitals</span></div>
-            <div class="metric"><span class="metric-val">Real-time</span><span class="metric-lbl">Queue Management</span></div>
-          </div>
-        </div>
-        <div class="portfolio-screenshots">
-          <div class="screenshot-row">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/4c434f2b-fb19-4f47-b7e1-75c6f1a9f84d/urgent-1.jpg" alt="Virtual Waiting Room" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1705092307180-P9QXHGG8ZNW7TRFNU02X/urgent-4%2B%25281%2529.jpg" alt="Queue Interface" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f5b30b68-4834-4c73-b0b8-197f70487a7b/image000001.jpg" alt="Waiting Room Live" loading="lazy">
-          </div>
-          <div class="scroll-hint">← Swipe to see more →</div>
-        </div>
-      </div>
-
-      <!-- Student Concierge -->
-      <div class="portfolio-card fade-up">
-        <div class="portfolio-content">
-          <div class="portfolio-tag">Talent & Operations</div>
-          <h3>Student Concierge</h3>
-          <p>Scheduling, capacity, and placement platform for veterinary externs. Replaced manual hospital-by-hospital coordination with centralized matching. Integrated with Workday and ServiceNow.</p>
-          <div class="portfolio-metrics">
-            <div class="metric"><span class="metric-val">2,000+</span><span class="metric-lbl">Students Placed</span></div>
-            <div class="metric"><span class="metric-val">80%</span><span class="metric-lbl">Conversion Rate</span></div>
-          </div>
-        </div>
-        <div class="portfolio-screenshots">
-          <div class="screenshot-row">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/ef1ddd55-8b06-459f-a577-f4850690d033/student+-+4.jpg" alt="Student Concierge Portal" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1530ba7a-d921-4d92-b953-47808d4c618e/student+-+5.jpg" alt="Student Scheduling" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/e3a3a981-19c7-4c31-8bac-e89a0756f7c3/student+-+6.jpg" alt="Student Placement" loading="lazy">
-            <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7c00dc03-e704-496f-9070-4236f1510407/student+-+3.jpg" alt="Student Dashboard" loading="lazy">
-          </div>
-          <div class="scroll-hint">← Swipe to see more →</div>
-        </div>
-      </div>
-
-    </div>
+  <div class="hero-photo">
+    <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7bc9c342-47bf-48e0-bd09-e07d94b646dc/5+-+Abe.jpeg" alt="Ibrahim Al-Murjan" width="360" height="450">
+    <div class="bdg bdg-a"><div class="bdg-l">Award</div><div class="bdg-v">Mars Global<br>Innovation Winner</div></div>
+    <div class="bdg-y"><span class="n">18+</span><span class="l">Years in Product</span></div>
   </div>
-</section>
+</div></div></section>
 
-<!-- Experience -->
-<section id="experience">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="section-eyebrow">Career Journey</div>
-      <h2 class="section-title">Where I've <em>been</em></h2>
-    </div>
-    <div class="timeline-list fade-up">
-      <div class="timeline-item">
-        <div class="timeline-date">Current</div>
-        <h3>Senior Director, Digital Products & Innovation</h3>
-        <h4>VCA Animal Hospitals (Mars Petcare)</h4>
-        <p>Own product vision and delivery for consumer and enterprise digital products across 1,000+ veterinary hospitals. Portfolio includes AI medical documentation, telehealth, a consumer app (1M+ users), staff workflow tools, and direct client messaging. Mars "Make the Difference" Global Innovation Award winner.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Previously</div>
-        <h3>Product Manager → Senior Product Manager</h3>
-        <h4>VCA Animal Hospitals</h4>
-        <p>Grew from mobile PM to owning the digital product portfolio. Launched the first 2-way SMS platform for veterinary client engagement (2014), built the consumer app, and developed the virtual waiting room product that deployed network-wide.</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Earlier Career</div>
-        <h3>Software Training & Implementation</h3>
-        <h4>VCA Animal Hospitals</h4>
-        <p>Trained hospital teams on practice management software across the network. Learned the operational workflow and pain points firsthand — context that informed every product decision since.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="stats"><div class="wrap"><div class="stats-r">
+  <div class="an"><span class="sn">1M+</span><span class="sl">App Users</span></div>
+  <div class="an d1"><span class="sn">75M+</span><span class="sl">Messages Exchanged</span></div>
+  <div class="an d2"><span class="sn">500K+</span><span class="sl">AI Dictations</span></div>
+  <div class="an d3"><span class="sn">4.8★</span><span class="sl">User Satisfaction</span></div>
+</div></div></div>
 
-<!-- Testimonials -->
-<section id="testimonials">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="section-eyebrow">References</div>
-      <h2 class="section-title">What colleagues <em>say</em></h2>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial-card fade-up">
-        <p class="testimonial-text">"Abe has the ability to cut through the noise, make the right trade-offs, and deliver maximum value. He led the product development and launch of 4 mobile apps at a rate that would impress even the most aggressive start-up teams."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">BL</div>
-          <div>
-            <div class="testimonial-name">Brendan Lynch</div>
-            <div class="testimonial-role">SVP, Product & Innovation</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card fade-up stagger-1">
-        <p class="testimonial-text">"I am proud of the profound impact Abe has had on VCA and me. He has such a passion and dedication towards anything he does. Anyone would be lucky to have him as part of their organization."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">BA</div>
-          <div>
-            <div class="testimonial-name">Bob Antin</div>
-            <div class="testimonial-role">CEO & Founder, VCA</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card fade-up stagger-2">
-        <p class="testimonial-text">"An exceptional IT product leader who truly stands out for his innovative thinking, strategic vision, and unwavering passion. Abe approaches every challenge with a big-picture mindset, ensuring solutions position the business for future success."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">AF</div>
-          <div>
-            <div class="testimonial-name">Aaron Frazier</div>
-            <div class="testimonial-role">COO, North America</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-card fade-up stagger-3">
-        <p class="testimonial-text">"Abe has brought a collaborative, client-centric approach to each engagement. His down-to-earth, approachable demeanor makes him relatable to stakeholders at a variety of levels, and a fun person to have on a team."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MS</div>
-          <div>
-            <div class="testimonial-name">Martha Smith</div>
-            <div class="testimonial-role">Chief Client Officer</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<section id="about" class="sec"><div class="wrap"><div class="about-inner">
+  <div class="ab an">
+    <div class="se">Background</div>
+    <h2 class="st">How I <em>work</em></h2>
+    <p>I started on the ground floor — training hospital teams on software, learning every operational pain point firsthand. That shaped how I approach product: start with the real problem, build for the people using it, measure what matters.</p>
+    <p>Since then I've led product teams responsible for consumer apps, AI clinical tools, telehealth platforms, and enterprise workflow systems across a network of 1,000+ locations. I've shipped products in as little as 6 weeks and scaled them to millions of users.</p>
   </div>
-</section>
+  <div class="an d2"><div class="sk">
+    <div class="skc"><div class="ski">⚡</div><h4>0 → 1 Launches</h4><p>Multiple products from concept to production — including one shipped in 6 weeks.</p></div>
+    <div class="skc"><div class="ski">📐</div><h4>Team Building</h4><p>Built cross-functional product teams across engineering, design, and operations.</p></div>
+    <div class="skc"><div class="ski">↗</div><h4>Scale</h4><p>Products deployed across 1,000+ locations serving millions of end users.</p></div>
+    <div class="skc"><div class="ski">◉</div><h4>AI & Innovation</h4><p>Shipped production AI tools — dictation, triage, clinical automation — in regulated healthcare.</p></div>
+  </div></div>
+</div></div></section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <div class="fade-up">
-      <div class="section-eyebrow" style="justify-content:center;">Contact</div>
-      <h2 class="section-title" style="text-align:center;">Let's talk about<br>your next <em>product challenge</em></h2>
-      <p class="cta-desc">Open to new opportunities in digital product leadership. Happy to connect.</p>
-      <div class="cta-links">
-        <a href="mailto:abealmurjan@gmail.com" class="btn-primary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          abealmurjan@gmail.com
-        </a>
-        <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-secondary">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn Profile
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="portfolio" class="sec pf-sec"><div class="wrap">
+  <div class="se">Product Portfolio</div>
+  <h2 class="st">What I've <em>shipped</em></h2>
 
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <p>© 2026 Ibrahim Al-Murjan</p>
+  <div class="pc an"><div class="pt"><div class="ptag">Consumer Mobile App</div><h3>Consumer Healthcare App</h3><p>Consumer mobile app for a 1,000+ location veterinary network. Handles check-in, document signing, digital checkout, and 24/7 care access. Grew to over 1M active users with a 4.8-star rating.</p><div class="pn"><div><span class="v">1M+</span><span class="l">Active Users</span></div><div><span class="v">4.8</span><span class="l">App Store Rating</span></div></div></div>
+  <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/29c98f01-9696-4ad4-a6d2-28f03ebef127/myvca-1.jpg" alt="myVCA Home" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d553794d-a360-45c9-b5b5-35a8f90de84a/myvca-2.jpg" alt="myVCA Profile" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/b1a24247-615c-465a-a4af-dbc7aea42ccd/myvca-4.jpg" alt="myVCA Features" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/faaae44c-9df9-4627-9524-913c66503bba/myvca-4+%281%29.jpg" alt="myVCA Checkout" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
+
+  <div class="pc an"><div class="pt"><div class="ptag">AI-Powered Healthcare</div><h3>AI Medical Dictation</h3><p>AI-powered dictation tool that cut manual medical record writing by 90%. Doctors dictate, the system transcribes and pushes structured notes into the practice management system. Concept to production in 6 weeks.</p><div class="pn"><div><span class="v">500K+</span><span class="l">Dictations Year 1</span></div><div><span class="v">95%</span><span class="l">Accuracy Rate</span></div><div><span class="v">6 wks</span><span class="l">Built & Launched</span></div></div></div>
+  <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/52c4c0f5-494d-4a0a-b471-40533a7a1678/scribe+-+1.jpg" alt="Scribe Dictation" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/cb27256c-121c-4db8-ab77-2e00219b07e9/scribe+-+2.jpg" alt="Scribe Transcription" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/be26933b-e195-44c9-8c71-673f638a1f54/scribe+-+3.jpg" alt="Scribe Records" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/63ee0a82-1c52-4c4d-9b60-a5919a0a4350/scribe+-+4.jpg" alt="Scribe Dashboard" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
+
+  <div class="pc an"><div class="pt"><div class="ptag">Virtual Care Platform</div><h3>Telehealth & Live Chat</h3><p>In-app teletriage chat launched in 2018, expanded to full video and 24/7 access in 2020. Omnichannel — web and mobile, integrated with medical records, real-time clinical data.</p><div class="pn"><div><span class="v">24/7</span><span class="l">Around-the-Clock</span></div><div><span class="v">4.8★</span><span class="l">Client Satisfaction</span></div></div></div>
+  <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/01657c15-227d-4558-a55d-fd1d7c59a0f1/telehealth-1.jpg" alt="Telehealth" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/710bce2c-bdc2-451e-9846-2974f70ce605/telehealth-2.jpg" alt="Live Chat" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/2246e5d4-91f3-4d9a-9ef6-d92face85ead/telehealth-3.jpg" alt="Chat View" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/9fa280a2-e1c6-49ae-a83e-1bbbef890caa/telehealth-4.jpg" alt="Video Call" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
+
+  <div class="pc an"><div class="pt"><div class="ptag">Enterprise Staff Platform</div><h3>Staff Enablement & Direct Messaging</h3><p>Mobile staff platform paired with a 2-way SMS system for client communication. Texting product launched in 2014. Digitized front-desk workflows, eliminated paper processes, and created a direct engagement channel across the full network.</p><div class="pn"><div><span class="v">5M+</span><span class="l">Client Engagements</span></div><div><span class="v">75M+</span><span class="l">Texts Exchanged</span></div><div><span class="v">10M+</span><span class="l">Sheets Saved</span></div></div></div>
+  <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7a638a63-9496-4127-8825-15e18438d58d/companion-1.jpg" alt="Retriever+" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/6df8c33d-a24c-4ebb-9c3e-c6078fe5f6b6/companion-2.jpg" alt="Retriever+ Docs" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d6f14579-5759-409c-bb5e-4037aa4563b1/companion-4.jpg" alt="Dashboard" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/71581fce-b299-4e2f-8cc6-d25b03e322b5/sms-1.jpg" alt="SMS" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f92b351c-a683-44e1-b590-76fa7eec72fa/sms-2.jpg" alt="SMS Thread" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/bd249175-3787-4866-86fe-2ddf991a2b37/sms-3.jpg" alt="SMS Photos" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
+
+  <div class="pc an"><div class="pt"><div class="ptag">Digital Operations</div><h3>Virtual Waiting Room</h3><p>First-of-its-kind fully integrated digital front door with real-time wait times and automated queue management. Reduced lobby crowding, freed up staff, and delivered a stress-free client experience.</p><div class="pn"><div><span class="v">1,000+</span><span class="l">Hospitals</span></div><div><span class="v">Real-time</span><span class="l">Queue Management</span></div></div></div>
+  <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/4c434f2b-fb19-4f47-b7e1-75c6f1a9f84d/urgent-1.jpg" alt="Waiting Room" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1705092307180-P9QXHGG8ZNW7TRFNU02X/urgent-4%2B%25281%2529.jpg" alt="Queue" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f5b30b68-4834-4c73-b0b8-197f70487a7b/image000001.jpg" alt="Live View" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
+
+  <div class="pc an"><div class="pt"><div class="ptag">Talent & Operations</div><h3>Student Concierge</h3><p>Scheduling, capacity, and placement platform for veterinary externs. Replaced manual hospital-by-hospital coordination with centralized matching. Integrated with Workday and ServiceNow.</p><div class="pn"><div><span class="v">2,000+</span><span class="l">Students Placed</span></div><div><span class="v">80%</span><span class="l">Conversion Rate</span></div></div></div>
+  <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/ef1ddd55-8b06-459f-a577-f4850690d033/student+-+4.jpg" alt="Student Portal" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1530ba7a-d921-4d92-b953-47808d4c618e/student+-+5.jpg" alt="Scheduling" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/e3a3a981-19c7-4c31-8bac-e89a0756f7c3/student+-+6.jpg" alt="Placement" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7c00dc03-e704-496f-9070-4236f1510407/student+-+3.jpg" alt="Dashboard" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
+
+</div></section>
+
+<section id="experience" class="sec"><div class="wrap">
+  <div class="se">Career Journey</div>
+  <h2 class="st">Where I've <em>been</em></h2>
+  <div class="tl an">
+    <div class="ti"><div class="td">Current</div><h3>Senior Director, Digital Products & Innovation</h3><h4>VCA Animal Hospitals (Mars Petcare)</h4><p>Own product vision and delivery for consumer and enterprise digital products across 1,000+ veterinary hospitals. Portfolio includes AI medical documentation, telehealth, a consumer app (1M+ users), staff workflow tools, and direct client messaging. Mars "Make the Difference" Global Innovation Award winner.</p></div>
+    <div class="ti"><div class="td">Previously</div><h3>Product Manager → Senior Product Manager</h3><h4>VCA Animal Hospitals</h4><p>Grew from mobile PM to owning the digital product portfolio. Launched the first 2-way SMS platform for veterinary client engagement (2014), built the consumer app, and developed the virtual waiting room product that deployed network-wide.</p></div>
+    <div class="ti"><div class="td">Earlier Career</div><h3>Software Training & Implementation</h3><h4>VCA Animal Hospitals</h4><p>Trained hospital teams on practice management software across the network. Learned the operational workflow and pain points firsthand — context that informed every product decision since.</p></div>
   </div>
-</footer>
+</div></section>
+
+<section id="refs" class="sec"><div class="wrap">
+  <div class="se">References</div>
+  <h2 class="st">What colleagues <em>say</em></h2>
+  <div class="tg">
+    <div class="tc an"><blockquote>"Abe has the ability to cut through the noise, make the right trade-offs, and deliver maximum value. He led the product development and launch of 4 mobile apps at a rate that would impress even the most aggressive start-up teams."</blockquote><div class="tw"><div class="tav">BL</div><div><div class="tn">Brendan Lynch</div><div class="tr">SVP, Product & Innovation</div></div></div></div>
+    <div class="tc an d1"><blockquote>"I am proud of the profound impact Abe has had on VCA and me. He has such a passion and dedication towards anything he does. Anyone would be lucky to have him as part of their organization."</blockquote><div class="tw"><div class="tav">BA</div><div><div class="tn">Bob Antin</div><div class="tr">CEO & Founder, VCA</div></div></div></div>
+    <div class="tc an d2"><blockquote>"An exceptional IT product leader who truly stands out for his innovative thinking, strategic vision, and unwavering passion. Abe approaches every challenge with a big-picture mindset, ensuring solutions position the business for future success."</blockquote><div class="tw"><div class="tav">AF</div><div><div class="tn">Aaron Frazier</div><div class="tr">COO, North America</div></div></div></div>
+    <div class="tc an d3"><blockquote>"Abe has brought a collaborative, client-centric approach to each engagement. His down-to-earth, approachable demeanor makes him relatable to stakeholders at a variety of levels, and a fun person to have on a team."</blockquote><div class="tw"><div class="tav">MS</div><div><div class="tn">Martha Smith</div><div class="tr">Chief Client Officer</div></div></div></div>
+  </div>
+</div></section>
+
+<section class="sec cta"><div class="wrap"><div class="an">
+  <div class="se" style="justify-content:center">Contact</div>
+  <h2 class="st" style="text-align:center">Let's talk about your next <em>product challenge</em></h2>
+  <p class="cta-sub">Open to new opportunities in digital product leadership. Happy to connect.</p>
+  <div class="cta-b">
+    <a href="mailto:abealmurjan@gmail.com" class="btn-g">✉ abealmurjan@gmail.com</a>
+    <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-o">LinkedIn Profile</a>
+  </div>
+</div></div></section>
+
+<footer class="ft"><div class="wrap"><p>© 2026 Ibrahim Al-Murjan</p></div></footer>
 
 <script>
-// Mobile nav toggle with animation
-const toggle = document.getElementById('navToggle');
-const links = document.getElementById('navLinks');
-toggle.addEventListener('click', () => {
-  links.classList.toggle('open');
-  toggle.classList.toggle('active');
-  document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
-});
-links.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    links.classList.remove('open');
-    toggle.classList.remove('active');
-    document.body.style.overflow = '';
-  });
-});
-
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+const b=document.getElementById('nb'),o=document.getElementById('no');
+b.addEventListener('click',()=>{b.classList.toggle('on');o.classList.toggle('on');document.body.style.overflow=o.classList.contains('on')?'hidden':'';});
+o.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.classList.remove('on');o.classList.remove('on');document.body.style.overflow='';}));
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vi')})},{threshold:0.08});
+document.querySelectorAll('.an').forEach(el=>io.observe(el));
 </script>
-
 </body>
 </html>
