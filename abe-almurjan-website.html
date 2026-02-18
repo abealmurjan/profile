@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,8 +13,8 @@
    MOBILE-FIRST · WCAG CONTRAST-SAFE
    ============================================ */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
-body { font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif; background:#0C0C0E; color:#E8E4DC; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden; }
+body { font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif; background:#0C0C0E; color:#E8E4DC; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; width:100%; }
 img { max-width:100%; height:auto; display:block; }
 a { color:inherit; }
 ::selection { background:#D4A853; color:#0C0C0E; }
@@ -24,7 +25,7 @@ a { color:inherit; }
   --line:rgba(232,228,220,0.08);
   --serif:'Instrument Serif',Georgia,serif; --sans:'DM Sans',sans-serif;
 }
-.wrap { width:100%; max-width:1200px; margin:0 auto; padding:0 20px; }
+.wrap { width:100%; max-width:1200px; margin:0 auto; padding:0 20px; overflow-x:hidden; }
 .sec { padding:48px 0; }
 
 /* --- Nav --- */
@@ -63,7 +64,7 @@ a { color:inherit; }
 .hero-ey::before { content:''; width:20px; height:1px; background:var(--gold); }
 .hero h1 { font-family:var(--serif); font-size:2.2rem; line-height:1.08; letter-spacing:-0.03em; margin-bottom:20px; }
 .hero h1 em { font-style:italic; color:var(--gold); }
-.hero-desc { font-size:0.95rem; color:var(--c2); line-height:1.7; margin-bottom:28px; }
+.hero-desc { font-size:0.95rem; color:var(--c2); line-height:1.7; margin-bottom:28px; word-wrap:break-word; overflow-wrap:break-word; }
 .hero-btns { display:flex; flex-direction:column; gap:12px; }
 .hero-photo { margin-top:32px; position:relative; width:100%; max-width:260px; }
 .hero-photo img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:16px; border:1px solid var(--line); }
@@ -218,13 +219,13 @@ a { color:inherit; }
   <a href="#" class="nav-logo">abe<span>.</span></a>
   <div class="nav-menu">
     <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
-    <a href="mailto:abealmurjan@gmail.com" class="pill">Let's Connect</a>
+    <a href="/cdn-cgi/l/email-protection#a7c6c5c2c6cbcad2d5cdc6c9e7c0cac6cecb89c4c8ca" class="pill">Let's Connect</a>
   </div>
   <button class="nav-btn" id="nb" aria-label="Menu"><span></span><span></span><span></span></button>
 </div></nav>
 <div class="nav-ov" id="no">
   <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
-  <a href="mailto:abealmurjan@gmail.com" class="pill">Let's Connect</a>
+  <a href="/cdn-cgi/l/email-protection#82e3e0e7e3eeeff7f0e8e3ecc2e5efe3ebeeace1edef" class="pill">Let's Connect</a>
 </div>
 
 <!-- ========== HERO ========== -->
@@ -234,7 +235,7 @@ a { color:inherit; }
     <h1>18 years building<br><em>products & teams</em><br>that scale</h1>
     <p class="hero-desc">I'm Ibrahim Al-Murjan. I build and scale digital platforms and the teams behind them — across 2,500+ locations in North America, Europe, and Asia. Consumer apps, AI-powered clinical tools, enterprise systems. From zero to millions of users, from first hire to 62-person global org.</p>
     <div class="hero-btns">
-      <a href="mailto:abealmurjan@gmail.com" class="btn-g">✉ Get in Touch</a>
+      <a href="/cdn-cgi/l/email-protection#fb9a999e9a97968e89919a95bb9c969a9297d5989496" class="btn-g">✉ Get in Touch</a>
       <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-o">LinkedIn</a>
     </div>
   </div>
@@ -389,19 +390,13 @@ a { color:inherit; }
   <h2 class="st" style="text-align:center">Let's talk about your next <em>product challenge</em></h2>
   <p class="cta-sub">Open to new opportunities in global product leadership. Happy to connect.</p>
   <div class="cta-b">
-    <a href="mailto:abealmurjan@gmail.com" class="btn-g">✉ abealmurjan@gmail.com</a>
+    <a href="/cdn-cgi/l/email-protection#95f4f7f0f4f9f8e0e7fff4fbd5f2f8f4fcf9bbf6faf8" class="btn-g">✉ <span class="__cf_email__" data-cfemail="5b3a393e3a37362e29313a351b3c363a323775383436">[email&#160;protected]</span></a>
     <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-o">LinkedIn Profile</a>
   </div>
 </div></div></section>
 
 <footer class="ft"><div class="wrap"><p>© 2026 Ibrahim Al-Murjan</p></div></footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const b=document.getElementById('nb'),o=document.getElementById('no');
-b.addEventListener('click',()=>{b.classList.toggle('on');o.classList.toggle('on');document.body.style.overflow=o.classList.contains('on')?'hidden':'';});
-o.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.classList.remove('on');o.classList.remove('on');document.body.style.overflow='';}));
-const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vi')})},{threshold:0.08});
-document.querySelectorAll('.an').forEach(el=>io.observe(el));
-</script>
-</body>
-</html>
+b.addEventListener('click',()=>{b.classList.toggle('on');o.classList.toggle('on');document.body.style.overflow=o.classList.contains('on')?'h
