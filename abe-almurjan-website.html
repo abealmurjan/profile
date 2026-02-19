@@ -1,9 +1,9 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Ibrahim Al-Murjan — Global VP of Product. 18 years building products, teams, and platforms that scale across 2,500+ locations.">
+<meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
 <title>Ibrahim Al-Murjan — Global VP of Product</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@ html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:hidden;
 body { font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif; background:#0C0C0E; color:#E8E4DC; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased; width:100%; }
 img { max-width:100%; height:auto; display:block; }
 a { color:inherit; }
-::selection { background:#D4A853; color:#0C0C0E; }
+::selection { background:#E0B45C; color:#0C0C0E; }
 :root {
   --bg:#0C0C0E; --bg2:#141418; --bg3:#1A1A20;
   --c1:#E8E4DC; --c2:#B5AFA5; --c3:#8A847A;
@@ -32,7 +32,7 @@ a { color:inherit; }
 .nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:14px 0;
   background:rgba(12,12,14,0.85); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--line); }
-.nav .wrap { display:flex; justify-content:space-between; align-items:center; }
+.nav .wrap { display:flex; justify-content:space-between; align-items:center; overflow:visible; }
 .nav-logo { font-family:var(--serif); font-size:1.25rem; text-decoration:none; color:var(--c1); z-index:102; position:relative; }
 .nav-logo span { color:var(--gold); }
 .nav-menu { display:none; }
@@ -141,8 +141,6 @@ a { color:inherit; }
 .edu-deg { font-family:var(--serif); font-size:1.05rem; color:var(--c1); margin-bottom:4px; }
 .edu-school { font-size:0.82rem; color:var(--gold); margin-bottom:4px; }
 .edu-detail { font-size:0.78rem; color:var(--c3); line-height:1.5; }
-
-/* --- Extras bar --- */
 .extras { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
 .ext-tag { background:var(--gold-dim); color:var(--gold); font-size:0.7rem; padding:6px 14px;
   border-radius:100px; font-weight:500; letter-spacing:0.02em; }
@@ -173,7 +171,7 @@ a { color:inherit; }
 .an.vi { opacity:1; transform:translateY(0); }
 .d1{transition-delay:.1s} .d2{transition-delay:.2s} .d3{transition-delay:.3s}
 
-/* ============================================ TABLET ============================================ */
+/* ========== TABLET ========== */
 @media(min-width:600px){
   .wrap{padding:0 32px} .sec{padding:64px 0}
   .hero h1{font-size:2.8rem} .hero-btns{flex-direction:row} .hero-photo{max-width:300px}
@@ -184,7 +182,7 @@ a { color:inherit; }
   .tg{grid-template-columns:1fr 1fr} .cta-b{flex-direction:row;justify-content:center}
   .edu-grid{grid-template-columns:1fr 1fr}
 }
-/* ============================================ DESKTOP ============================================ */
+/* ========== DESKTOP ========== */
 @media(min-width:960px){
   .wrap{padding:0 48px} .sec{padding:96px 0}
   .nav-btn{display:none}
@@ -215,17 +213,18 @@ a { color:inherit; }
 </head>
 <body>
 
+<!-- Nav -->
 <nav class="nav"><div class="wrap">
   <a href="#" class="nav-logo">abe<span>.</span></a>
   <div class="nav-menu">
     <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
-    <a href="/cdn-cgi/l/email-protection#a7c6c5c2c6cbcad2d5cdc6c9e7c0cac6cecb89c4c8ca" class="pill">Let's Connect</a>
+    <a href="#contact" class="pill">Let's Connect</a>
   </div>
   <button class="nav-btn" id="nb" aria-label="Menu"><span></span><span></span><span></span></button>
 </div></nav>
 <div class="nav-ov" id="no">
   <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
-  <a href="/cdn-cgi/l/email-protection#82e3e0e7e3eeeff7f0e8e3ecc2e5efe3ebeeace1edef" class="pill">Let's Connect</a>
+  <a href="#contact" class="pill">Let's Connect</a>
 </div>
 
 <!-- ========== HERO ========== -->
@@ -233,9 +232,9 @@ a { color:inherit; }
   <div>
     <div class="hero-ey">Global VP of Product</div>
     <h1>18 years building<br><em>products & teams</em><br>that scale</h1>
-    <p class="hero-desc">I'm Ibrahim Al-Murjan. I build and scale digital platforms and the teams behind them — across 2,500+ locations in North America, Europe, and Asia. Consumer apps, AI-powered clinical tools, enterprise systems. From zero to millions of users, from first hire to 62-person global org.</p>
+    <p class="hero-desc">I'm Ibrahim Al-Murjan. I build digital products and the organizations behind them. My consumer apps reach 2M+ users. My internal AI tools have processed 1.5M+ clinical dictations. I've built and led a 62-person global team across product, design, engineering, and operations — shipping across 2,500+ locations in North America, Europe, and Asia.</p>
     <div class="hero-btns">
-      <a href="/cdn-cgi/l/email-protection#fb9a999e9a97968e89919a95bb9c969a9297d5989496" class="btn-g">✉ Get in Touch</a>
+      <a href="#contact" class="btn-g">✉ Get in Touch</a>
       <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-o">LinkedIn</a>
     </div>
   </div>
@@ -248,10 +247,10 @@ a { color:inherit; }
 
 <!-- ========== STATS ========== -->
 <div class="stats"><div class="wrap"><div class="stats-r">
-  <div class="an"><span class="sn">2M+</span><span class="sl">App Users</span></div>
+  <div class="an"><span class="sn">2M+</span><span class="sl">Consumer App Users</span></div>
   <div class="an d1"><span class="sn">1.5M+</span><span class="sl">AI Dictations Processed</span></div>
-  <div class="an d2"><span class="sn">$110M</span><span class="sl">Portfolio Managed</span></div>
-  <div class="an d3"><span class="sn">4.8★</span><span class="sl">User Satisfaction</span></div>
+  <div class="an d2"><span class="sn">2,500+</span><span class="sl">Locations Worldwide</span></div>
+  <div class="an d3"><span class="sn">62</span><span class="sl">Person Global Team</span></div>
 </div></div></div>
 
 <!-- ========== ABOUT ========== -->
@@ -260,14 +259,14 @@ a { color:inherit; }
     <div class="se">Background</div>
     <h2 class="st">How I <em>work</em></h2>
     <p>I started on the ground floor — training hospital teams on software across 18 states, learning every operational pain point firsthand. That shaped how I approach product: start with the real problem, build for the people using it, measure what matters.</p>
-    <p>Since then I've gone from program leader to Global VP of Product, building a 62-person team across product, design, engineering, and operations. I manage a $110M annual portfolio spanning consumer apps, AI clinical tools, telehealth, and enterprise workflow systems across 2,500+ locations globally. I've shipped products in as little as 6 weeks and scaled them to millions of users.</p>
+    <p>Since then I've gone from program leader to Global VP of Product, building a 62-person team across product, design, engineering, and operations. I own a $150M+ annual portfolio spanning consumer apps, AI-powered clinical tools for our veterinary staff, telehealth, and enterprise workflow systems across 2,500+ locations globally. I've shipped products in as little as 6 weeks and scaled them to millions of users.</p>
     <p>Graduate of the University of Denver — M.A. in Global Finance & Trade from the Korbel School of International Studies, B.S. in Business Information Technology from Daniels College of Business. Fluent in English and Arabic.</p>
   </div>
   <div class="an d2"><div class="sk">
-    <div class="skc"><div class="ski">⚡</div><h4>0 → 1 Launches</h4><p>Multiple products from concept to production — including an AI dictation tool shipped in 6 weeks.</p></div>
+    <div class="skc"><div class="ski">⚡</div><h4>0 → 1 Launches</h4><p>Multiple products from concept to production — including an AI dictation tool for veterinary staff shipped in 6 weeks.</p></div>
     <div class="skc"><div class="ski">📐</div><h4>Team Builder</h4><p>Built product and engineering departments from scratch. Grew a 62-person global org with clear KPIs.</p></div>
-    <div class="skc"><div class="ski">↗</div><h4>Global Scale</h4><p>Products deployed across 2,500+ locations in North America, Europe, and Asia serving millions of users.</p></div>
-    <div class="skc"><div class="ski">◉</div><h4>AI in Production</h4><p>Shipped AI dictation, triage, and decision-support tools in regulated healthcare — with human-in-the-loop safeguards.</p></div>
+    <div class="skc"><div class="ski">↗</div><h4>Global Scale</h4><p>Products deployed across 2,500+ locations in North America, Europe, and Asia serving millions of end users.</p></div>
+    <div class="skc"><div class="ski">◉</div><h4>AI in Production</h4><p>Shipped AI dictation, triage, and decision-support tools for clinical staff — with human-in-the-loop safeguards in regulated healthcare.</p></div>
   </div></div>
 </div></div></section>
 
@@ -281,7 +280,7 @@ a { color:inherit; }
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/29c98f01-9696-4ad4-a6d2-28f03ebef127/myvca-1.jpg" alt="myVCA Home" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d553794d-a360-45c9-b5b5-35a8f90de84a/myvca-2.jpg" alt="myVCA Profile" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/b1a24247-615c-465a-a4af-dbc7aea42ccd/myvca-4.jpg" alt="myVCA Features" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/faaae44c-9df9-4627-9524-913c66503bba/myvca-4+%281%29.jpg" alt="myVCA Checkout" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
 
   <!-- Scribe AI -->
-  <div class="pc an"><div class="pt"><div class="ptag">AI-Powered Clinical Tool</div><h3>AI Medical Dictation</h3><p>AI-powered dictation tool that replaced manual medical record writing. Veterinarians dictate, the system transcribes and pushes structured SOAP notes directly into the practice management system. Cut documentation time by 90%, drove a 30% increase in clinical efficiency, and went from concept to production in 6 weeks. Over 1.5M dictations processed in the field — one of the first production AI tools in veterinary medicine.</p><div class="pn"><div><span class="v">1.5M+</span><span class="l">Dictations Processed</span></div><div><span class="v">30%</span><span class="l">Efficiency Gain</span></div><div><span class="v">6 wks</span><span class="l">Concept to Launch</span></div></div></div>
+  <div class="pc an"><div class="pt"><div class="ptag">AI-Powered Internal Tool</div><h3>AI Medical Dictation</h3><p>Custom-built AI dictation tool for our veterinary staff that replaced manual medical record writing. Veterinarians dictate, the system transcribes and pushes structured SOAP notes directly into the practice management system. Cut documentation time by 90%, drove a 30% increase in clinical efficiency, and went from concept to production in 6 weeks. Over 1.5M dictations processed — one of the first production AI tools in veterinary medicine.</p><div class="pn"><div><span class="v">1.5M+</span><span class="l">Dictations Processed</span></div><div><span class="v">30%</span><span class="l">Efficiency Gain</span></div><div><span class="v">6 wks</span><span class="l">Concept to Launch</span></div></div></div>
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/52c4c0f5-494d-4a0a-b471-40533a7a1678/scribe+-+1.jpg" alt="Scribe Dictation" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/cb27256c-121c-4db8-ab77-2e00219b07e9/scribe+-+2.jpg" alt="Scribe Transcription" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/be26933b-e195-44c9-8c71-673f638a1f54/scribe+-+3.jpg" alt="Scribe Records" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/63ee0a82-1c52-4c4d-9b60-a5919a0a4350/scribe+-+4.jpg" alt="Scribe Dashboard" loading="lazy"></div><div class="sh">← Swipe to see more →</div></div></div>
 
   <!-- Telehealth -->
@@ -311,13 +310,13 @@ a { color:inherit; }
       <div class="td">2024 — Present</div>
       <h3>Global VP of Product</h3>
       <h4>Mars Veterinary Health — Hybrid: CA, NY, FL, Europe/Asia</h4>
-      <p>Leading strategy and delivery of a global digital product platform across 2,500+ hospitals and 70,000+ associates in North America, Europe, and Asia. Managing a $110M annual portfolio with a 62-person global team across product, design, engineering, and operations. Driving AI integration across clinical and commercial workflows, cutting administrative workload by 30%. Rebuilt the global product organization, introduced agile delivery, and established cross-regional governance.</p>
+      <p>Leading strategy and delivery of a global digital product platform across 2,500+ hospitals and 70,000+ associates in North America, Europe, and Asia. Managing a $150M+ annual portfolio with a 62-person global team across product, design, engineering, and operations. Driving AI integration across clinical and commercial workflows, cutting administrative workload by 30%. Rebuilt the global product organization, introduced agile delivery, and established cross-regional governance.</p>
     </div>
     <div class="ti">
       <div class="td">2021 — 2024</div>
       <h3>Vice President, Digital Product</h3>
       <h4>VCA Inc — Santa Monica, CA</h4>
-      <p>Directed digital transformation for 1,200+ hospitals, improving the care experience for 5 million clients. Built product and engineering departments from the ground up with clear KPIs. Managed $10M+ budgets, grew the product team to meet increasing scale and complexity, and delivered product strategy keynotes to executive leadership.</p>
+      <p>Directed digital transformation for 1,200+ hospitals, improving the care experience for 5 million clients. Built product and engineering departments from the ground up with clear KPIs. Managed budgets and grew the product team to meet increasing scale and complexity. Delivered product strategy keynotes to executive leadership.</p>
     </div>
     <div class="ti">
       <div class="td">2021 — 2022</div>
@@ -341,7 +340,7 @@ a { color:inherit; }
       <div class="td">2009 — 2018</div>
       <h3>Product & Training Leader</h3>
       <h4>VCA Animal Hospitals — Traveling North America & Canada</h4>
-      <p>Progressed from Program Leader to Product Manager over 9 years, leading digital transformation, training, and adoption initiatives across a 500-hospital network. Recruited by the COO/Co-Founder to design a management training program that reversed a 30% revenue decline to 3% growth within one year at a pilot hospital. Trained teams across 18 states, onboarding 75+ locations. Pitched and led digital transformation partnerships with startups and vendors, accelerating release cycles from annual to 3-week sprints. Grew product adoption from 3% to 50%+ across the network.</p>
+      <p>Progressed from Program Leader to Product Manager over 9 years, leading digital transformation, training, and adoption initiatives across a 500-hospital network. Recruited by the COO/Co-Founder to design a management training program that reversed a 30% revenue decline to 3% growth at a pilot hospital. Trained teams across 18 states, onboarding 75+ locations. Pitched and led digital transformation partnerships, accelerating release cycles from annual to 3-week sprints. Grew product adoption from 3% to 50%+ network-wide.</p>
     </div>
   </div>
 
@@ -365,8 +364,6 @@ a { color:inherit; }
       <span class="ext-tag">Fluent in English & Arabic</span>
       <span class="ext-tag">Basic French</span>
       <span class="ext-tag">Mars Global Innovation Award</span>
-      <span class="ext-tag">$110M Portfolio</span>
-      <span class="ext-tag">62-Person Global Team</span>
     </div>
   </div>
 
@@ -385,18 +382,24 @@ a { color:inherit; }
 </div></section>
 
 <!-- ========== CTA ========== -->
-<section class="sec cta"><div class="wrap"><div class="an">
+<section id="contact" class="sec cta"><div class="wrap"><div class="an">
   <div class="se" style="justify-content:center">Contact</div>
   <h2 class="st" style="text-align:center">Let's talk about your next <em>product challenge</em></h2>
   <p class="cta-sub">Open to new opportunities in global product leadership. Happy to connect.</p>
   <div class="cta-b">
-    <a href="/cdn-cgi/l/email-protection#95f4f7f0f4f9f8e0e7fff4fbd5f2f8f4fcf9bbf6faf8" class="btn-g">✉ <span class="__cf_email__" data-cfemail="5b3a393e3a37362e29313a351b3c363a323775383436">[email&#160;protected]</span></a>
+    <a href="mailto:abealmurjan@gmail.com" class="btn-g">✉ abealmurjan@gmail.com</a>
     <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="btn-o">LinkedIn Profile</a>
   </div>
 </div></div></section>
 
 <footer class="ft"><div class="wrap"><p>© 2026 Ibrahim Al-Murjan</p></div></footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const b=document.getElementById('nb'),o=document.getElementById('no');
-b.addEventListener('click',()=>{b.classList.toggle('on');o.classList.toggle('on');document.body.style.overflow=o.classList.contains('on')?'h
+b.addEventListener('click',()=>{b.classList.toggle('on');o.classList.toggle('on');document.body.style.overflow=o.classList.contains('on')?'hidden':'';});
+o.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.classList.remove('on');o.classList.remove('on');document.body.style.overflow='';}));
+const io=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vi')})},{threshold:0.08});
+document.querySelectorAll('.an').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
