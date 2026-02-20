@@ -2,9 +2,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ibrahim Al-Murjan — Global VP of Product. 18 years building products, teams, and platforms that scale across 2,500+ locations.">
+<meta name="description" content="Ibrahim Al-Murjan. Global VP of Product. 18 years building products, teams, and platforms that scale across 2,500+ locations.">
 <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
-<title>Ibrahim Al-Murjan — Global VP of Product</title>
+<title>Ibrahim Al-Murjan | Global VP of Product</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
@@ -79,11 +79,12 @@ a{color:inherit}
 .sh2{font-family:var(--serif);font-size:1.7rem;letter-spacing:-.02em;line-height:1.1;margin-bottom:32px}
 .sh2 em{font-style:italic;color:var(--gold)}
 
-/* About */
+/* About - distinct background */
+.ab-sec{background:linear-gradient(180deg,#16151A 0%,#121115 50%,var(--bg) 100%);border-top:1px solid rgba(224,180,92,0.08);border-bottom:1px solid var(--line)}
 .ab p{font-size:.92rem;color:var(--c2);line-height:1.8;margin-bottom:14px}
 .ab p:first-of-type::first-letter{font-family:var(--serif);font-size:2.8rem;float:left;color:var(--gold);line-height:1;margin-right:8px;margin-top:4px}
 .sk{display:grid;grid-template-columns:1fr;gap:10px;margin-top:28px}
-.skc{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:16px}
+.skc{background:var(--bg3);border:1px solid var(--line);border-radius:10px;padding:16px}
 .ski{width:28px;height:28px;background:var(--gold-dim);border-radius:7px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;color:var(--gold);font-size:.85rem}
 .skc h4{font-family:var(--serif);font-size:.95rem;margin-bottom:3px}
 .skc p{font-size:.78rem;color:var(--c3);line-height:1.5}
@@ -106,6 +107,16 @@ a{color:inherit}
 .gr img{flex:0 0 auto;width:52vw;max-width:260px;border-radius:10px;border:1px solid rgba(255,255,255,.06);box-shadow:0 6px 28px rgba(0,0,0,.4);transition:transform .3s;position:relative;z-index:1}
 .gr img:hover{transform:translateY(-3px)}
 .swh{text-align:center;padding:6px 0 2px;font-size:.6rem;color:var(--c3);text-transform:uppercase;letter-spacing:.08em;position:relative;z-index:1}
+.ip-tag{display:inline-block;background:rgba(224,180,92,0.15);color:var(--gold);font-size:.62rem;padding:3px 10px;border-radius:100px;font-weight:500;letter-spacing:.04em;margin-bottom:10px;margin-right:4px}
+
+/* Speaking */
+.spk-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:24px}
+.spk-card{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.spk-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.spk-info{padding:16px}
+.spk-info h4{font-family:var(--serif);font-size:.95rem;margin-bottom:4px}
+.spk-info p{font-size:.78rem;color:var(--c3)}
+.spk-note{font-size:.88rem;color:var(--c2);line-height:1.7;margin-top:20px}
 
 /* Timeline */
 .tl{position:relative;padding-left:22px}
@@ -117,7 +128,7 @@ a{color:inherit}
 .ti h4{font-size:.82rem;color:var(--c2);font-weight:400;margin-bottom:8px}
 .ti p{font-size:.82rem;color:var(--c3);line-height:1.7}
 
-/* Education */
+/* Education & Skills */
 .eg{display:grid;grid-template-columns:1fr;gap:12px;margin-top:28px}
 .ec{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:18px}
 .ed{font-family:var(--serif);font-size:1rem;color:var(--c1);margin-bottom:3px}
@@ -125,6 +136,9 @@ a{color:inherit}
 .edt{font-size:.75rem;color:var(--c3);line-height:1.5}
 .ex{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
 .et{background:var(--gold-dim);color:var(--gold);font-size:.68rem;padding:5px 12px;border-radius:100px;font-weight:500}
+.tools-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tool{background:var(--bg3);border:1px solid var(--line);color:var(--c2);font-size:.72rem;padding:7px 14px;border-radius:8px;font-weight:400;transition:border-color .3s}
+.tool:hover{border-color:var(--gold)}
 
 /* Testimonials */
 .tg{display:grid;grid-template-columns:1fr;gap:14px}
@@ -149,9 +163,8 @@ a{color:inherit}
 /* Anim */
 .an{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .an.vi{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 
-/* ===== TABLET ===== */
 @media(min-width:600px){
   .w{padding:0 32px}.s{padding:56px 0}
   .hr h1{font-size:2.6rem}.hr-b{flex-direction:row}.hr-ph{max-width:280px}
@@ -161,8 +174,8 @@ a{color:inherit}
   .gr img{width:38vw;max-width:280px}.swh{display:none}
   .tg{grid-template-columns:1fr 1fr}.ct-b{flex-direction:row;justify-content:center}
   .eg{grid-template-columns:1fr 1fr}
+  .spk-grid{grid-template-columns:1fr 1fr 1fr}
 }
-/* ===== DESKTOP ===== */
 @media(min-width:960px){
   .w{padding:0 48px}.s{padding:80px 0}
   .nb{display:none}
@@ -196,13 +209,13 @@ a{color:inherit}
 <nav class="nv"><div class="w">
   <a href="#" class="nl">abe<span>.</span></a>
   <div class="nm">
-    <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
+    <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#refs">References</a>
     <a href="#contact" class="pl">Let's Connect</a>
   </div>
   <button class="nb" id="nb" aria-label="Menu"><span></span><span></span><span></span></button>
 </div></nav>
 <div class="no" id="no">
-  <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#refs">References</a>
+  <a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#refs">References</a>
   <a href="#contact" class="pl">Let's Connect</a>
 </div>
 
@@ -211,7 +224,7 @@ a{color:inherit}
   <div>
     <div class="hr-ey">Global VP of Product</div>
     <h1>18 years building<br><em>products & teams</em><br>that scale</h1>
-    <p class="hr-d">Consumer apps reaching 2M+ users. Internal AI tools with 1.5M+ clinical dictations processed. A 62-person global team across product, design, engineering, and operations — shipping across 2,500+ locations in North America, Europe, and Asia.</p>
+    <p class="hr-d">Consumer apps reaching 2M+ users. Proprietary AI tools with 1.5M+ clinical dictations processed. A 62-person global team across product, design, engineering, and operations, shipping across 2,500+ locations in North America, Europe, and Asia.</p>
     <div class="hr-b">
       <a href="#contact" class="bg">Get in Touch</a>
       <a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="bo">LinkedIn</a>
@@ -233,19 +246,19 @@ a{color:inherit}
 </div></div></div>
 
 <!-- ABOUT -->
-<section id="about" class="s"><div class="w"><div class="ab-in">
+<section id="about" class="s ab-sec"><div class="w"><div class="ab-in">
   <div class="ab an">
     <div class="se">Background</div>
     <h2 class="sh2">How the work <em>gets done</em></h2>
-    <p>Started on the ground floor — training hospital teams on software across 18 states, learning every operational pain point firsthand. That experience shaped a product philosophy rooted in real problems, built for real users, measured by what matters.</p>
-    <p>Over 18 years, the trajectory went from program leader to Global VP of Product — building a 62-person team across product, design, engineering, and operations. Today's scope: a $150M+ annual portfolio spanning consumer apps, AI-powered clinical tools for veterinary staff, telehealth platforms, and enterprise workflow systems across 2,500+ locations in North America, Europe, and Asia. Products shipped in as little as 6 weeks. Platforms scaled to millions of users.</p>
-    <p>University of Denver — M.A. in Global Finance & Trade (Korbel School), B.S. in Business Information Technology (Daniels College). Fluent in English and Arabic.</p>
+    <p>Good products come from getting close to the problem. Not reading about it in a report or hearing about it secondhand, but sitting with the person doing the work and watching where things break down. That has always been the starting point.</p>
+    <p>The habit came from years on the ground, in 18 states, training frontline teams on new software and seeing exactly where tools helped and where they fell short. That proximity became a practice: spend time with the people who will use the thing before designing anything, then stay close through every release.</p>
+    <p>Today that same principle applies at a larger scale. A 62-person global team across product, design, engineering, and operations. A $150M+ annual portfolio. Consumer apps, clinical tools, telehealth platforms, and enterprise workflow systems across 2,500+ locations. Some shipped in as little as 6 weeks. All rooted in understanding the real problem first.</p>
   </div>
   <div class="an d2"><div class="sk">
-    <div class="skc"><div class="ski">⚡</div><h4>0 → 1 Launches</h4><p>Multiple products from concept to production — including an AI dictation tool for veterinary staff shipped in 6 weeks.</p></div>
+    <div class="skc"><div class="ski">⚡</div><h4>0 to 1 Builds</h4><p>Multiple products taken from concept to production. When off-the-shelf solutions don't fit, the answer is to build what does.</p></div>
     <div class="skc"><div class="ski">📐</div><h4>Team Builder</h4><p>Product and engineering departments built from scratch. 62-person global org with clear KPIs and shared goals.</p></div>
-    <div class="skc"><div class="ski">↗</div><h4>Global Scale</h4><p>Products deployed across 2,500+ locations in North America, Europe, and Asia — millions of end users served.</p></div>
-    <div class="skc"><div class="ski">◉</div><h4>AI in Production</h4><p>AI dictation, triage, and decision-support tools shipped in regulated healthcare — with human-in-the-loop safeguards.</p></div>
+    <div class="skc"><div class="ski">↗</div><h4>Global Scale</h4><p>Products deployed across 2,500+ locations in North America, Europe, and Asia, reaching millions of end users.</p></div>
+    <div class="skc"><div class="ski">◉</div><h4>AI in Production</h4><p>Custom AI dictation and triage tools shipped in regulated healthcare with human-in-the-loop safeguards.</p></div>
   </div></div>
 </div></div></section>
 
@@ -254,22 +267,28 @@ a{color:inherit}
   <div class="se">Product Portfolio</div>
   <h2 class="sh2">What's been <em>shipped</em></h2>
 
-  <div class="pc an"><div class="pt"><div class="ptg">Consumer Mobile App</div><h3>Consumer Healthcare App</h3><p>Consumer mobile app for a 1,000+ location veterinary network. Handles check-in, document signing, Text to Pay digital checkout (powering $1B+ in payment collection), and 24/7 care access. Scaled to 2M+ active users with a 4.8-star rating.</p><div class="pn"><div><span class="v">2M+</span><span class="l">Active Users</span></div><div><span class="v">$1B+</span><span class="l">Payments Processed</span></div><div><span class="v">4.8★</span><span class="l">App Store Rating</span></div></div></div>
+  <!-- myVCA -->
+  <div class="pc an"><div class="pt"><div class="ptg">Consumer Mobile App</div><h3>Consumer Healthcare App</h3><p>Consumer mobile app for a 1,000+ location veterinary network. Check-in, document signing, Text to Pay digital checkout (powering $1B+ in payment collection), and 24/7 care access all in one place. Scaled to 2M+ active users with a 4.8-star rating.</p><div class="pn"><div><span class="v">2M+</span><span class="l">Active Users</span></div><div><span class="v">$1B+</span><span class="l">Payments Processed</span></div><div><span class="v">4.8★</span><span class="l">App Store Rating</span></div></div></div>
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/29c98f01-9696-4ad4-a6d2-28f03ebef127/myvca-1.jpg" alt="myVCA Home" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d553794d-a360-45c9-b5b5-35a8f90de84a/myvca-2.jpg" alt="myVCA Profile" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/b1a24247-615c-465a-a4af-dbc7aea42ccd/myvca-4.jpg" alt="myVCA Features" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/faaae44c-9df9-4627-9524-913c66503bba/myvca-4+%281%29.jpg" alt="myVCA Checkout" loading="lazy"></div><div class="swh">← Swipe to see more →</div></div></div>
 
-  <div class="pc an"><div class="pt"><div class="ptg">AI-Powered Internal Tool</div><h3>AI Medical Dictation</h3><p>Custom-built AI dictation tool for veterinary staff, replacing manual medical record writing. Clinicians dictate; the system transcribes and pushes structured SOAP notes directly into the practice management system. Reduced documentation time by 90%, drove a 30% increase in clinical efficiency, and went from concept to production in 6 weeks. Over 1.5M dictations processed — one of the first production AI tools in veterinary medicine.</p><div class="pn"><div><span class="v">1.5M+</span><span class="l">Dictations Processed</span></div><div><span class="v">30%</span><span class="l">Efficiency Gain</span></div><div><span class="v">6 wks</span><span class="l">Concept to Launch</span></div></div></div>
+  <!-- Scribe AI -->
+  <div class="pc an"><div class="pt"><span class="ip-tag">Built 0 to 1</span><span class="ip-tag">Proprietary IP</span><div class="ptg">AI-Powered Internal Tool</div><h3>AI Medical Dictation</h3><p>Off-the-shelf transcription tools could not handle the complexity of veterinary medical records, so the team designed and built a custom dictation system from scratch. Clinicians speak, the system transcribes, and structured SOAP notes push directly into the practice management system. Cut documentation time by 90% and improved clinical efficiency by 30%. Went from concept to production in 6 weeks. Over 1.5M dictations processed so far. One of the first production AI tools in veterinary medicine, and it created real IP value for the organization.</p><div class="pn"><div><span class="v">1.5M+</span><span class="l">Dictations Processed</span></div><div><span class="v">30%</span><span class="l">Efficiency Gain</span></div><div><span class="v">6 wks</span><span class="l">Concept to Launch</span></div></div></div>
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/52c4c0f5-494d-4a0a-b471-40533a7a1678/scribe+-+1.jpg" alt="Scribe Dictation" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/cb27256c-121c-4db8-ab77-2e00219b07e9/scribe+-+2.jpg" alt="Scribe Transcription" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/be26933b-e195-44c9-8c71-673f638a1f54/scribe+-+3.jpg" alt="Scribe Records" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/63ee0a82-1c52-4c4d-9b60-a5919a0a4350/scribe+-+4.jpg" alt="Scribe Dashboard" loading="lazy"></div><div class="swh">← Swipe to see more →</div></div></div>
 
-  <div class="pc an"><div class="pt"><div class="ptg">Virtual Care Platform</div><h3>Telehealth & Live Chat</h3><p>In-app teletriage chat launched in 2018, expanded to full video and 24/7 access in 2020 as part of the pandemic response. Available to 1M+ clients across the network. Omnichannel — web and mobile, integrated with medical records and real-time clinical data.</p><div class="pn"><div><span class="v">1M+</span><span class="l">Clients with Access</span></div><div><span class="v">24/7</span><span class="l">Around-the-Clock</span></div><div><span class="v">4.8★</span><span class="l">Client Satisfaction</span></div></div></div>
+  <!-- Telehealth -->
+  <div class="pc an"><div class="pt"><div class="ptg">Virtual Care Platform</div><h3>Telehealth & Live Chat</h3><p>Started as an in-app teletriage chat in 2018. Expanded to full video and 24/7 access in 2020 when the pandemic hit and clients needed remote care fast. Works across web and mobile, pulls real-time data from medical records so clinicians have full context during every session. Available to 1M+ clients across the network.</p><div class="pn"><div><span class="v">1M+</span><span class="l">Clients with Access</span></div><div><span class="v">24/7</span><span class="l">Around-the-Clock</span></div><div><span class="v">4.8★</span><span class="l">Client Satisfaction</span></div></div></div>
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/01657c15-227d-4558-a55d-fd1d7c59a0f1/telehealth-1.jpg" alt="Telehealth" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/710bce2c-bdc2-451e-9846-2974f70ce605/telehealth-2.jpg" alt="Live Chat" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/2246e5d4-91f3-4d9a-9ef6-d92face85ead/telehealth-3.jpg" alt="Chat View" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/9fa280a2-e1c6-49ae-a83e-1bbbef890caa/telehealth-4.jpg" alt="Video Call" loading="lazy"></div><div class="swh">← Swipe to see more →</div></div></div>
 
-  <div class="pc an"><div class="pt"><div class="ptg">Operational Efficiency & Privacy</div><h3>Staff Enablement & Direct Messaging</h3><p>Mobile staff platform paired with a 2-way SMS system for client communication — launched in 2014, before most healthcare orgs had a direct messaging strategy. Delivered instant client access while protecting employee personal phone numbers and work-life boundaries. Digitized front-desk workflows, eliminated paper processes, and became the primary engagement channel across the network.</p><div class="pn"><div><span class="v">5M+</span><span class="l">Client Engagements</span></div><div><span class="v">75M+</span><span class="l">Messages Exchanged</span></div><div><span class="v">10M+</span><span class="l">Paper Forms Eliminated</span></div></div></div>
+  <!-- Staff Enablement -->
+  <div class="pc an"><div class="pt"><div class="ptg">Operational Efficiency & Privacy</div><h3>Staff Enablement & Direct Messaging</h3><p>Mobile staff platform paired with a 2-way SMS system for client communication. Launched in 2014, before most healthcare organizations had any kind of direct messaging strategy. Gave clients instant access to their care team while keeping employee personal phone numbers private. Replaced paper-based front desk workflows and became the primary engagement channel across the full network.</p><div class="pn"><div><span class="v">5M+</span><span class="l">Client Engagements</span></div><div><span class="v">75M+</span><span class="l">Messages Exchanged</span></div><div><span class="v">10M+</span><span class="l">Paper Forms Eliminated</span></div></div></div>
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7a638a63-9496-4127-8825-15e18438d58d/companion-1.jpg" alt="Retriever+" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/6df8c33d-a24c-4ebb-9c3e-c6078fe5f6b6/companion-2.jpg" alt="Retriever+ Docs" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d6f14579-5759-409c-bb5e-4037aa4563b1/companion-4.jpg" alt="Dashboard" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/71581fce-b299-4e2f-8cc6-d25b03e322b5/sms-1.jpg" alt="SMS" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f92b351c-a683-44e1-b590-76fa7eec72fa/sms-2.jpg" alt="SMS Thread" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/bd249175-3787-4866-86fe-2ddf991a2b37/sms-3.jpg" alt="SMS Photos" loading="lazy"></div><div class="swh">← Swipe to see more →</div></div></div>
 
-  <div class="pc an"><div class="pt"><div class="ptg">ER & Urgent Care Operations</div><h3>Virtual Waiting Room</h3><p>Automated queue management system deployed across the ER and Urgent Care hospital network. Clients check in digitally, see real-time wait estimates, and receive status updates — reducing lobby crowding and walk-away rates. Less stress on clients and front-desk staff. Drove a 20% revenue lift by keeping clients in the funnel.</p><div class="pn"><div><span class="v">1,000+</span><span class="l">ER/Urgent Care Hospitals</span></div><div><span class="v">20%</span><span class="l">Revenue Lift</span></div><div><span class="v">Real-time</span><span class="l">Queue Management</span></div></div></div>
+  <!-- Virtual Waiting Room -->
+  <div class="pc an"><div class="pt"><span class="ip-tag">Built 0 to 1</span><span class="ip-tag">Proprietary IP</span><div class="ptg">ER & Urgent Care Operations</div><h3>Virtual Waiting Room</h3><p>No off-the-shelf queue system could handle the unpredictability of emergency veterinary care. So this was built from scratch. Entirely automated: clients check in digitally, get real-time wait estimates and status updates, and flow through to hospital reception without a phone call or lobby wait. Tens of thousands of phoneless placements and arrivals, designed to make a stressful situation as painless as possible. Deployed across 150+ urgent care and ER clinics. Created proprietary IP for the organization and drove a 20% revenue lift by keeping clients in the funnel.</p><div class="pn"><div><span class="v">150+</span><span class="l">ER/Urgent Care Clinics</span></div><div><span class="v">20%</span><span class="l">Revenue Lift</span></div><div><span class="v">Fully Automated</span><span class="l">Phoneless Check-in</span></div></div></div>
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/4c434f2b-fb19-4f47-b7e1-75c6f1a9f84d/urgent-1.jpg" alt="Waiting Room" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1705092307180-P9QXHGG8ZNW7TRFNU02X/urgent-4%2B%25281%2529.jpg" alt="Queue" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f5b30b68-4834-4c73-b0b8-197f70487a7b/image000001.jpg" alt="Live View" loading="lazy"></div><div class="swh">← Swipe to see more →</div></div></div>
 
-  <div class="pc an"><div class="pt"><div class="ptg">Talent Pipeline & Operations</div><h3>Student Concierge</h3><p>Scheduling, capacity, and placement platform for veterinary externs. Replaced manual hospital-by-hospital coordination with centralized matching. Integrated with Workday and ServiceNow. 80% of placed externs converted into full-time hires.</p><div class="pn"><div><span class="v">2,000+</span><span class="l">Students Placed</span></div><div><span class="v">80%</span><span class="l">Hire Conversion</span></div></div></div>
+  <!-- Student Concierge -->
+  <div class="pc an"><div class="pt"><div class="ptg">Talent Pipeline & Operations</div><h3>Student Concierge</h3><p>Scheduling, capacity, and placement platform for veterinary externs. Replaced the old process of manual hospital-by-hospital coordination with centralized matching. Plugs into Workday and ServiceNow. 80% placement rate across the network, with 45% of placed externs converting to full-time hires after their program.</p><div class="pn"><div><span class="v">2,000+</span><span class="l">Students Placed</span></div><div><span class="v">80%</span><span class="l">Placement Rate</span></div><div><span class="v">45%</span><span class="l">Hire Conversion</span></div></div></div>
   <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/ef1ddd55-8b06-459f-a577-f4850690d033/student+-+4.jpg" alt="Student Portal" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1530ba7a-d921-4d92-b953-47808d4c618e/student+-+5.jpg" alt="Scheduling" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/e3a3a981-19c7-4c31-8bac-e89a0756f7c3/student+-+6.jpg" alt="Placement" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7c00dc03-e704-496f-9070-4236f1510407/student+-+3.jpg" alt="Dashboard" loading="lazy"></div><div class="swh">← Swipe to see more →</div></div></div>
 
 </div></section>
@@ -279,25 +298,66 @@ a{color:inherit}
   <div class="se">Career Journey</div>
   <h2 class="sh2">18 years of <em>growth</em></h2>
   <div class="tl an">
-    <div class="ti"><div class="td">2024 — Present</div><h3>Global VP of Product</h3><h4>Mars Veterinary Health — CA, NY, FL, Europe/Asia</h4><p>Strategy and delivery of a global digital product platform across 2,500+ hospitals and 70,000+ associates. $150M+ annual portfolio. 62-person global team across product, design, engineering, and operations. AI integration across clinical and commercial workflows, cutting administrative workload by 30%. Rebuilt the global product organization, introduced agile delivery, and established cross-regional governance.</p></div>
-    <div class="ti"><div class="td">2021 — 2024</div><h3>Vice President, Digital Product</h3><h4>VCA Inc — Santa Monica, CA</h4><p>Digital transformation across 1,200+ hospitals, improving care for 5 million clients. Product and engineering departments built from the ground up with clear KPIs. Team scaling, budget ownership, and executive-level product strategy alignment.</p></div>
-    <div class="ti"><div class="td">2021 — 2022</div><h3>Senior Director, Digital Innovation</h3><h4>VCA Inc — CA/CO</h4><p>Launched the automated queue system for urgent care — reducing wait stress and improving patient flow, resulting in a 20% revenue lift. Relaunched digital platforms to 50% adoption across a non-standardized operational environment.</p></div>
-    <div class="ti"><div class="td">2019 — 2021</div><h3>Director, Digital Innovation</h3><h4>VCA Animal Hospitals — CA/CO</h4><p>Scaled the client-facing digital experience across 1,000+ hospitals in the US and Canada. Launched the consumer app and Text to Pay, powering $1B+ in digital payment collection. Led the digital pandemic response — video telehealth and live chat deployed network-wide.</p></div>
-    <div class="ti"><div class="td">2018 — 2019</div><h3>Senior Product Manager</h3><h4>VCA Animal Hospitals — Denver, CO</h4><p>Scrum teams delivering mobile and web apps across 800+ hospitals. Roadmap ownership for flagship tools: myVCA, Retriever+, and Messenger. Training programs developed for 20,000+ employees to support adoption.</p></div>
-    <div class="ti"><div class="td">2009 — 2018</div><h3>Product & Training Leader</h3><h4>VCA Animal Hospitals — North America & Canada</h4><p>Nine-year progression from Program Leader to Product Manager. Digital transformation, training, and adoption across a 500-hospital network. Recruited by the COO/Co-Founder to design a management training program that reversed a 30% revenue decline to 3% growth at a pilot hospital. Teams trained across 18 states, 75+ locations onboarded. Release cycles accelerated from annual to 3-week sprints. Product adoption grown from 3% to 50%+ network-wide.</p></div>
+    <div class="ti"><div class="td">2024 – Present</div><h3>Global VP of Product</h3><h4>Mars Veterinary Health, CA / NY / FL / Europe / Asia</h4><p>Strategy and delivery of a global digital product platform across 2,500+ hospitals and 70,000+ associates. $150M+ annual portfolio. 62-person global team across product, design, engineering, and operations. AI integration across clinical and commercial workflows cut administrative workload by 30%. Rebuilt the global product organization, brought in agile delivery, and set up cross-regional governance.</p></div>
+    <div class="ti"><div class="td">2021 – 2024</div><h3>Vice President, Digital Product</h3><h4>VCA Inc, Santa Monica, CA</h4><p>Digital transformation across 1,200+ hospitals, touching care for 5 million clients. Built the product and engineering departments from the ground up with clear KPIs. Owned team scaling, budget, and executive-level product strategy.</p></div>
+    <div class="ti"><div class="td">2021 – 2022</div><h3>Senior Director, Digital Innovation</h3><h4>VCA Inc, CA / CO</h4><p>Built and launched the automated queue system for urgent care. Reduced wait-related stress and improved patient flow, with a 20% revenue lift. Relaunched digital platforms to 50% adoption in a non-standardized operational environment.</p></div>
+    <div class="ti"><div class="td">2019 – 2021</div><h3>Director, Digital Innovation</h3><h4>VCA Animal Hospitals, CA / CO</h4><p>Scaled the client-facing digital experience across 1,000+ hospitals in the US and Canada. Launched the consumer app and Text to Pay, which powered $1B+ in digital payment collection. Led the digital pandemic response: video telehealth and live chat deployed network-wide.</p></div>
+    <div class="ti"><div class="td">2018 – 2019</div><h3>Senior Product Manager</h3><h4>VCA Animal Hospitals, Denver, CO</h4><p>Scrum teams delivering mobile and web apps across 800+ hospitals. Roadmap ownership for flagship tools: myVCA, Retriever+, and Messenger. Training programs developed for 20,000+ employees to support adoption.</p></div>
+    <div class="ti"><div class="td">2009 – 2018</div><h3>Product & Training Leader</h3><h4>VCA Animal Hospitals, North America & Canada</h4><p>Nine-year progression from Program Leader to Product Manager. Recruited by the COO and Co-Founder to design a management training program that reversed a 30% revenue decline to 3% growth at a pilot hospital. Trained teams across 18 states, onboarded 75+ locations. Accelerated release cycles from annual to 3-week sprints. Grew product adoption from 3% to 50%+ network-wide.</p></div>
   </div>
 
+  <!-- Education -->
   <div class="an" style="margin-top:40px">
     <div class="se">Education</div>
     <h2 class="sh2" style="margin-bottom:20px">Where it <em>started</em></h2>
     <div class="eg">
-      <div class="ec"><div class="ed">Master of Arts — Global Finance & Trade</div><div class="es">University of Denver, Korbel School of International Studies</div><div class="edt">Economic Integration · International Business · Homeland Security</div></div>
-      <div class="ec"><div class="ed">Bachelor of Science — Business Information Technology</div><div class="es">University of Denver, Daniels College of Business</div><div class="edt">International Business</div></div>
+      <div class="ec"><div class="ed">Master of Arts, Global Finance & Trade</div><div class="es">University of Denver, Korbel School of International Studies</div><div class="edt">Economic Integration · International Business · Homeland Security</div></div>
+      <div class="ec"><div class="ed">Bachelor of Science, Business Information Technology</div><div class="es">University of Denver, Daniels College of Business</div><div class="edt">International Business</div></div>
     </div>
     <div class="ex">
       <span class="et">Fluent in English & Arabic</span>
       <span class="et">Basic French</span>
       <span class="et">Mars Global Innovation Award</span>
+    </div>
+    <div class="tools-grid">
+      <span class="tool">Product Strategy</span>
+      <span class="tool">Agile / Scrum</span>
+      <span class="tool">Jira</span>
+      <span class="tool">Figma</span>
+      <span class="tool">Adobe Creative Suite</span>
+      <span class="tool">GitHub</span>
+      <span class="tool">SQL</span>
+      <span class="tool">Amplitude</span>
+      <span class="tool">Tableau</span>
+      <span class="tool">ServiceNow</span>
+      <span class="tool">Workday</span>
+      <span class="tool">Keynote / PowerPoint</span>
+      <span class="tool">Public Speaking</span>
+      <span class="tool">Executive Presentations</span>
+      <span class="tool">AI/ML Product Development</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- SPEAKING -->
+<section id="speaking" class="s" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="w">
+  <div class="se">On Stage</div>
+  <h2 class="sh2">Speaking & <em>Presenting</em></h2>
+  <p class="an" style="font-size:.92rem;color:var(--c2);line-height:1.7;max-width:640px;margin-bottom:24px">Regular speaker at executive leadership meetings, industry events, and internal all-hands. Comfortable on stage or in a boardroom. Topics range from digital transformation in healthcare and building product organizations from the ground up, to AI adoption in regulated settings and scaling consumer products across large multi-site networks.</p>
+
+  <div class="spk-grid an">
+    <!-- PLACEHOLDER: Replace src with your actual speaking photo URLs from Squarespace -->
+    <div class="spk-card">
+      <div style="width:100%;aspect-ratio:16/9;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--c3);font-size:.8rem">Speaking Photo 1</div>
+      <div class="spk-info"><h4>Executive Leadership Summit</h4><p>Product strategy keynote</p></div>
+    </div>
+    <div class="spk-card">
+      <div style="width:100%;aspect-ratio:16/9;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--c3);font-size:.8rem">Speaking Photo 2</div>
+      <div class="spk-info"><h4>Digital Innovation Conference</h4><p>AI in healthcare delivery</p></div>
+    </div>
+    <div class="spk-card">
+      <div style="width:100%;aspect-ratio:16/9;background:var(--bg3);display:flex;align-items:center;justify-content:center;color:var(--c3);font-size:.8rem">Speaking Photo 3</div>
+      <div class="spk-info"><h4>Internal Town Hall</h4><p>Product roadmap and vision</p></div>
     </div>
   </div>
 </div></section>
@@ -307,10 +367,11 @@ a{color:inherit}
   <div class="se">References</div>
   <h2 class="sh2">What colleagues <em>say</em></h2>
   <div class="tg">
-    <div class="tc an"><blockquote>"Abe has the ability to cut through the noise, make the right trade-offs, and deliver maximum value. He led the product development and launch of 4 mobile apps at a rate that would impress even the most aggressive start-up teams."</blockquote><div class="tw"><div class="ta">BL</div><div><div class="tn">Brendan Lynch</div><div class="tr">SVP, Product & Innovation</div></div></div></div>
-    <div class="tc an d1"><blockquote>"I am proud of the profound impact Abe has had on VCA and me. He has such a passion and dedication towards anything he does. Anyone would be lucky to have him as part of their organization."</blockquote><div class="tw"><div class="ta">BA</div><div><div class="tn">Bob Antin</div><div class="tr">CEO & Founder, VCA</div></div></div></div>
-    <div class="tc an d2"><blockquote>"An exceptional IT product leader who truly stands out for his innovative thinking, strategic vision, and unwavering passion. Abe approaches every challenge with a big-picture mindset, ensuring solutions position the business for future success."</blockquote><div class="tw"><div class="ta">AF</div><div><div class="tn">Aaron Frazier</div><div class="tr">COO, North America</div></div></div></div>
+    <div class="tc an"><blockquote>"I am proud of the profound impact Abe has had on VCA and me. He has such a passion and dedication towards anything he does. Anyone would be lucky to have him as part of their organization."</blockquote><div class="tw"><div class="ta">BA</div><div><div class="tn">Bob Antin</div><div class="tr">CEO & Founder, VCA</div></div></div></div>
+    <div class="tc an d1"><blockquote>"An exceptional IT product leader who truly stands out for his innovative thinking, strategic vision, and unwavering passion. Abe approaches every challenge with a big-picture mindset, ensuring solutions position the business for future success."</blockquote><div class="tw"><div class="ta">AF</div><div><div class="tn">Aaron Frazier</div><div class="tr">COO, North America</div></div></div></div>
+    <div class="tc an d2"><blockquote>"Abe is a special leader that leads with both his head and heart. In my years working with him, I've known him to be someone who knew how to advance difficult work forward, while also having those around him feel great about the experience. In short, he is smart, capable, and understands the human element of what it means to be on teams and be a servant leader."</blockquote><div class="tw"><div class="ta">GL</div><div><div class="tn">Garrett Lewis</div><div class="tr">Chief Executive, Vet Services, Greencross Pet Wellness</div></div></div></div>
     <div class="tc an d3"><blockquote>"Abe has brought a collaborative, client-centric approach to each engagement. His down-to-earth, approachable demeanor makes him relatable to stakeholders at a variety of levels, and a fun person to have on a team."</blockquote><div class="tw"><div class="ta">MS</div><div><div class="tn">Martha Smith</div><div class="tr">Chief Client Officer</div></div></div></div>
+    <div class="tc an d4"><blockquote>"Abe has the ability to cut through the noise, make the right trade-offs, and deliver maximum value. He led the product development and launch of 4 mobile apps at a rate that would impress even the most aggressive start-up teams."</blockquote><div class="tw"><div class="ta">BL</div><div><div class="tn">Brendan Lynch</div><div class="tr">SVP, Product & Innovation</div></div></div></div>
   </div>
 </div></section>
 
@@ -325,7 +386,7 @@ a{color:inherit}
   </div>
 </div></div></section>
 
-<footer class="ft"><div class="w"><p>© 2026 Ibrahim Al-Murjan</p></div></footer>
+<footer class="ft"><div class="w"><p>&copy; 2026 Ibrahim Al-Murjan</p></div></footer>
 
 <script>
 const b=document.getElementById('nb'),o=document.getElementById('no');
