@@ -108,7 +108,7 @@ a{color:inherit}
 <section class="hr s"><div class="w"><div class="hr-in"><div>
 <div class="hr-ey">Global VP of Product</div>
 <h1>Products, teams,<br>and platforms<br>that <em>scale</em></h1>
-<p class="hr-d">From building a business operations program that got me through the door, to scaling consumer apps, AI tools, and enterprise platforms across 2,500+ locations. Multiple roles, multiple moves, each one earned by delivering results and learning from the people around me.</p>
+<p class="hr-d">From building a business operations program that got me through the door, to scaling consumer apps, AI tools, and enterprise platforms across 2,500+ locations. Operations streamlined by an average of 30%, growth driven by 25%, and every product shipped with a clear return on investment.</p>
 <div class="hr-b"><a href="#contact" class="bg">Let's Connect</a><a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="bo">LinkedIn</a></div>
 </div><div class="hr-ph">
 <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7bc9c342-47bf-48e0-bd09-e07d94b646dc/5+-+Abe.jpeg" alt="Ibrahim Al-Murjan" width="340" height="425">
@@ -125,9 +125,9 @@ a{color:inherit}
 
 <section id="about" class="s ab-sec"><div class="w"><div class="ab-in">
 <div class="ab an"><div class="se">Background</div>
-<h2 class="sh2">Where products <em>come together</em></h2>
-<p>Got through the door by building a business operations program that brought fresh perspective to a problem nobody else was solving. That first engagement led to the next, and the one after that. Every move was earned — knocking down barriers, learning from mentors who set a high bar, and delivering results that opened new doors.</p>
-<p>That pattern scaled. From 4-person product pods to enterprise programs with 200+ contractors, the work has always been about reading the situation, building the right team for it, and shipping something that moves the needle. Consumer apps, AI tools, operational platforms, payment systems — across industries and continents. Whether it's standing something up from zero or walking into a complex situation and finding a way through, the approach is the same.</p>
+<h2 class="sh2">How the work <em>gets done</em></h2>
+<p>Got through the door by building a business operations program that streamlined workflows and turned a 30% revenue decline into 3% growth. That first engagement led to the next, and the one after that — each move earned by hitting KPIs, learning from mentors who set a high bar, and delivering measurable ROI that opened new doors.</p>
+<p>That pattern scaled. From 4-person product pods to enterprise programs with 200+ contractors, the work has always been about reading the situation, building the right team for it, and shipping something that moves the number. Consumer apps, AI tools, operational platforms, payment systems — across industries and continents. Whether it's standing something up from zero or walking into a complex situation and finding a way through, the approach is the same.</p>
 </div>
 <div class="an d2"><div class="sk">
 <div class="skc"><div class="ski">&#9889;</div><h4>0 to 1 Builds</h4><p>Multiple products from concept to production when off-the-shelf didn't fit.</p></div>
@@ -140,7 +140,7 @@ a{color:inherit}
 <div class="se">Product Portfolio</div><h2 class="sh2">What's been <em>shipped</em></h2>
 
 <!-- Consumer App + Stripe Partnership -->
-<div class="pc an"><div class="pt"><span class="ip-tag">Stripe Partnership</span><span class="ip-tag">Featured at Stripe Sessions</span><div class="ptg">Consumer Mobile App &amp; Embedded Payments</div><h3>Consumer Healthcare App &amp; Text to Pay</h3><p>Consumer mobile app for a 1,000+ location veterinary network. Check-in, document signing, 24/7 care access, and an embedded payment gateway built in partnership with Stripe. Text to Pay powered $1B+ in digital payment collection across the network. The integration was featured at Stripe Sessions, the company's annual kickoff hosted by CEO Patrick Collison.</p><div class="pn"><div><span class="v">2M+</span><span class="l">Active Users</span></div><div><span class="v">$1B+</span><span class="l">Payments via Stripe</span></div><div><span class="v">4.8&#9733;</span><span class="l">App Store Rating</span></div></div></div>
+<div class="pc an"><div class="pt"><span class="ip-tag">Stripe Partnership</span><span class="ip-tag">Stripe Sessions Opener</span><div class="ptg">Consumer Mobile App &amp; Embedded Payments</div><h3>Consumer Healthcare App &amp; Text to Pay</h3><p>Consumer mobile app for a 1,000+ location veterinary network. Check-in, document signing, 24/7 care access, and an embedded payment gateway built in partnership with Stripe. Text to Pay powered $1B+ in digital payment collection across the network. The integration opened Stripe Sessions, the company's annual kickoff alongside cofounder Patrick Collison.</p><div class="pn"><div><span class="v">2M+</span><span class="l">Active Users</span></div><div><span class="v">$1B+</span><span class="l">Payments via Stripe</span></div><div><span class="v">4.8&#9733;</span><span class="l">App Store Rating</span></div></div></div>
 <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/29c98f01-9696-4ad4-a6d2-28f03ebef127/myvca-1.jpg" alt="myVCA" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d553794d-a360-45c9-b5b5-35a8f90de84a/myvca-2.jpg" alt="myVCA" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/b1a24247-615c-465a-a4af-dbc7aea42ccd/myvca-4.jpg" alt="myVCA" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/faaae44c-9df9-4627-9524-913c66503bba/myvca-4+%281%29.jpg" alt="myVCA" loading="lazy"></div></div></div>
 
 <!-- Stripe Sessions Video Callout -->
@@ -148,8 +148,8 @@ a{color:inherit}
 <video controls preload="metadata"><source src="stripe-sessions-keynote.mp4" type="video/mp4"></video>
 <div class="stripe-info">
 <div class="se">Industry Partnership</div>
-<h3>Featured at Stripe Sessions</h3>
-<p>The embedded payment gateway was highlighted at Stripe Sessions, Stripe's annual kickoff hosted by CEO Patrick Collison. A real-world example of partnering with industry leaders to solve problems at scale and make experiences better for millions of people.</p>
+<h3>Stripe Sessions Opener with Cofounder Patrick Collison</h3>
+<p>The embedded payment gateway opened Stripe Sessions alongside cofounder Patrick Collison. A real-world partnership with an industry leader to solve problems at scale and make experiences better for millions of people.</p>
 <a href="https://www.linkedin.com/posts/abealmurjan_vcalife-marspetcare-innovation-activity-6811062137931362304--vDX/" target="_blank">See the LinkedIn post &rarr;</a>
 </div>
 </div>
@@ -201,7 +201,7 @@ a{color:inherit}
 </div></section>
 
 <section id="experience" class="s"><div class="w">
-<div class="se">Career Journey</div><h2 class="sh2">Every role <em>earned</em></h2>
+<div class="se">Career Journey</div><h2 class="sh2">Professional <em>career path</em></h2>
 <div class="tl an">
 <div class="ti"><div class="td">2024 – Present</div><h3>Global VP of Product</h3><h4>Mars Veterinary Health, CA / NY / FL / Europe / Asia</h4><p>Global digital product platform across 2,500+ hospitals and 70,000+ associates. $150M+ annual portfolio. Teams ranging from focused product pods to a 200+ person cross-functional org including contractors. AI integration cut admin workload by 30%. Rebuilt the global product org, brought in agile delivery, set up cross-regional governance.</p></div>
 <div class="ti"><div class="td">2021 – 2024</div><h3>Vice President, Digital Product</h3><h4>VCA Inc, Santa Monica, CA</h4><p>Digital transformation across 1,200+ hospitals, touching care for 5 million clients. Built product and engineering from the ground up. Owned team scaling, budget, and executive strategy.</p></div>
