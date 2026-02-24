@@ -2,7 +2,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ibrahim Al-Murjan. Global VP of Product. 18 years building products, teams, and platforms that scale across 2,500+ locations.">
+<meta name="description" content="Ibrahim Al-Murjan. Global VP of Product. Building products, teams, and platforms from the ground up — scaled across 2,500+ locations worldwide.">
 <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
 <title>Ibrahim Al-Murjan | Global VP of Product</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,19 +96,20 @@ a{color:inherit}
 .ft{border-top:1px solid var(--line);padding:28px 0;text-align:center}.ft p{color:var(--c3);font-size:.72rem}
 .an{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}.an.vi{opacity:1;transform:translateY(0)}.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
 @media(min-width:600px){.w{padding:0 32px}.s{padding:56px 0}.hr h1{font-size:2.6rem}.hr-b{flex-direction:row}.hr-ph{max-width:280px}.st-r{grid-template-columns:repeat(4,1fr)}.sn{font-size:2rem}.sl{font-size:.72rem}.sk{grid-template-columns:1fr 1fr}.sh2{font-size:2.1rem}.pt{padding:28px}.pc h3{font-size:1.4rem}.gr{grid-template-columns:repeat(4,1fr);gap:10px}.pg{padding:16px}.tg{grid-template-columns:1fr 1fr}.ct-b{flex-direction:row;justify-content:center}.eg{grid-template-columns:1fr 1fr}.eng-grid{grid-template-columns:repeat(3,1fr);gap:14px}.stripe-callout{display:grid;grid-template-columns:1fr 1fr}}
-@media(min-width:960px){.w{padding:0 48px}.s{padding:80px 0}.nb{display:none}.nm{display:flex;gap:24px;align-items:center}.nm a{color:var(--c2);text-decoration:none;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;transition:color .3s}.nm a:hover{color:var(--gold)}.nm .pl{background:var(--gold);color:var(--bg);padding:9px 20px;border-radius:100px;font-weight:500;text-transform:none;font-size:.82rem;transition:transform .3s,box-shadow .3s}.nm .pl:hover{transform:translateY(-1px);box-shadow:0 4px 14px var(--gold-glow)}.hr-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.hr{padding-top:88px;padding-bottom:40px}.hr h1{font-size:clamp(2.6rem,4.2vw,3.8rem)}.hr-d{font-size:1rem}.hr-ph{margin-top:0;max-width:340px}.bd-a{bottom:-14px;left:-20px;padding:12px 18px}.bd-v{font-size:1.2rem}.bd-y{top:-12px;right:-14px;padding:10px 16px}.bd-y .n{font-size:1.4rem}.ab-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}.ab p{font-size:.98rem}.pt{padding:36px}.pc h3{font-size:1.6rem}.pc p{font-size:.9rem}.pg{padding:20px}.sn{font-size:2.6rem}.sl{font-size:.78rem}.sh2{font-size:2.6rem;margin-bottom:40px}.tc{padding:32px}.tc blockquote{font-size:.92rem}.tl{padding-left:28px}.ti h3{font-size:1.25rem}.eng-grid{grid-template-columns:repeat(5,1fr)}.stripe-callout{display:grid;grid-template-columns:1fr 1fr}.stripe-info{padding:32px}.stripe-info h3{font-size:1.4rem}}
+@media(min-width:960px){.w{padding:0 48px}.s{padding:80px 0}.nb{display:none}.nm{display:flex;gap:24px;align-items:center}.nm a{color:var(--c2);text-decoration:none;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;transition:color .3s}.nm a:hover{color:var(--gold)}.nm .pl{background:var(--gold);color:var(--bg);padding:9px 20px;border-radius:100px;font-weight:500;text-transform:none;font-size:.82rem;transition:transform .3s,box-shadow .3s}.nm .pl:hover{transform:translateY(-1px);box-shadow:0 4px 14px var(--gold-glow)}.hr-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.hr{padding-top:88px;padding-bottom:40px}.hr h1{font-size:clamp(2.6rem,4.2vw,3.8rem)}.hr-d{font-size:1rem}.hr-ph{margin-top:0;max-width:340px}.bd-a{bottom:-14px;left:-20px;padding:12px 18px}.bd-v{font-size:1.2rem}.bd-y{top:-12px;right:-14px;padding:10px 16px}.bd-y .n{font-size:1.4rem}.ab-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}.ab p{font-size:.98rem}.pt{padding:36px}.pc h3{font-size:1.6rem}.pc p{font-size:.9rem}.pg{padding:20px}.sn{font-size:2.6rem}.sl{font-size:.78rem}.sh2{font-size:2.6rem;margin-bottom:40px}.tc{padding:32px}.tc blockquote{font-size:.92rem}.tl{padding-left:28px}.ti h3{font-size:1.25rem}.eng-grid{grid-template-columns:repeat(3,1fr)}.stripe-callout{display:grid;grid-template-columns:1fr 1fr}.stripe-info{padding:32px}.stripe-info h3{font-size:1.4rem}}
+@media(max-width:599px){body{font-size:18px}.hr h1{font-size:2.3rem}.hr-d{font-size:1.05rem}.ab p{font-size:1.05rem}.pc p{font-size:1rem}.pc h3{font-size:1.35rem}.ti p{font-size:.95rem}.ti h3{font-size:1.25rem}.ti h4{font-size:.95rem}.tc blockquote{font-size:1rem}.tn{font-size:.95rem}.sn{font-size:1.9rem}.sl{font-size:.78rem}.sh2{font-size:1.9rem}.se{font-size:.74rem}.ct-s{font-size:1.05rem}.vid-cap p{font-size:.92rem}.vid-cap h4{font-size:1.1rem}.stripe-info p{font-size:.95rem}.stripe-info h3{font-size:1.25rem}.ed{font-size:1.15rem}.es{font-size:.9rem}.edt{font-size:.88rem}.et{font-size:.8rem}.tool{font-size:.84rem}.skc h4{font-size:1.1rem}.skc p{font-size:.92rem}.ptg{font-size:.72rem}.pn .l{font-size:.74rem}.ip-tag{font-size:.74rem}.pn .v{font-size:1.2rem}}
 </style>
 </head>
 <body>
-<nav class="nv"><div class="w"><a href="#" class="nl">abe<span>.</span></a><div class="nm"><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#refs">References</a><a href="#contact" class="pl">Let's Connect</a></div><button class="nb" id="nb" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
-<div class="no" id="no"><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#experience">Experience</a><a href="#speaking">Speaking</a><a href="#refs">References</a><a href="#contact" class="pl">Let's Connect</a></div>
+<nav class="nv"><div class="w"><a href="#" class="nl">abe<span>.</span></a><div class="nm"><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#speaking">Speaking</a><a href="#experience">Experience</a><a href="#refs">References</a><a href="#contact" class="pl">Let's Connect</a></div><button class="nb" id="nb" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<div class="no" id="no"><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#speaking">Speaking</a><a href="#experience">Experience</a><a href="#refs">References</a><a href="#contact" class="pl">Let's Connect</a></div>
 <div class="lb" id="lb"><div class="lb-x" id="lbx">&times;</div><img id="lbi" src="" alt=""></div>
 
 <section class="hr s"><div class="w"><div class="hr-in"><div>
 <div class="hr-ey">Global VP of Product</div>
 <h1>Products, teams,<br>and platforms<br>that <em>scale</em></h1>
-<p class="hr-d">2M+ consumer app users. Proprietary AI tools with 1.5M+ clinical dictations. 62-person global team. 2,500+ locations across three continents. 18 years of building.</p>
-<div class="hr-b"><a href="#contact" class="bg">Get in Touch</a><a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="bo">LinkedIn</a></div>
+<p class="hr-d">From building a business operations program that got me through the door, to scaling consumer apps, AI tools, and enterprise platforms across 2,500+ locations. Multiple roles, multiple moves, each one earned by delivering results and learning from the people around me.</p>
+<div class="hr-b"><a href="#contact" class="bg">Let's Connect</a><a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="bo">LinkedIn</a></div>
 </div><div class="hr-ph">
 <img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7bc9c342-47bf-48e0-bd09-e07d94b646dc/5+-+Abe.jpeg" alt="Ibrahim Al-Murjan" width="340" height="425">
 <div class="bd bd-a"><div class="bd-l">Award</div><div class="bd-v">Mars Global<br>Innovation Winner</div></div>
@@ -119,49 +120,90 @@ a{color:inherit}
 <div class="an"><span class="sn">2M+</span><span class="sl">Consumer App Users</span></div>
 <div class="an d1"><span class="sn">1.5M+</span><span class="sl">AI Dictations Processed</span></div>
 <div class="an d2"><span class="sn">2,500+</span><span class="sl">Locations Worldwide</span></div>
-<div class="an d3"><span class="sn">62</span><span class="sl">Person Global Team</span></div>
+<div class="an d3"><span class="sn">4–200+</span><span class="sl">Team Scale Range</span></div>
 </div></div></div>
 
 <section id="about" class="s ab-sec"><div class="w"><div class="ab-in">
 <div class="ab an"><div class="se">Background</div>
-<h2 class="sh2">Getting close to <em>the problem</em></h2>
-<p>Products get better when you start with the people using them. Not a deck or a brief, but the actual workflow, the friction, the things that slow someone down at 2pm on a Tuesday.</p>
-<p>That habit started early. Training frontline teams on software across 18 states, sitting next to the people who would use the tools every day. It turned into a practice: spend time with end users before designing anything, then stay close through every release.</p>
-<p>Today the scope is bigger and the challenges keep changing. New technology spaces move fast, and the pressure to chase trends is constant. The focus stays on what actually drives value: a 62-person global team, $150M+ annual portfolio, consumer apps, clinical AI, telehealth, and enterprise systems across 2,500+ locations. Some shipped in 6 weeks. All built to solve real problems, not follow hype cycles.</p>
+<h2 class="sh2">Where products <em>come together</em></h2>
+<p>Got through the door by building a business operations program that brought fresh perspective to a problem nobody else was solving. That first engagement led to the next, and the one after that. Every move was earned — knocking down barriers, learning from mentors who set a high bar, and delivering results that opened new doors.</p>
+<p>That pattern scaled. From 4-person product pods to enterprise programs with 200+ contractors, the work has always been about reading the situation, building the right team for it, and shipping something that moves the needle. Consumer apps, AI tools, operational platforms, payment systems — across industries and continents. Whether it's standing something up from zero or walking into a complex situation and finding a way through, the approach is the same.</p>
 </div>
 <div class="an d2"><div class="sk">
 <div class="skc"><div class="ski">&#9889;</div><h4>0 to 1 Builds</h4><p>Multiple products from concept to production when off-the-shelf didn't fit.</p></div>
-<div class="skc"><div class="ski">&#128208;</div><h4>Team Builder</h4><p>Product and engineering departments built from scratch. 62-person global org.</p></div>
+<div class="skc"><div class="ski">&#128208;</div><h4>Team Design</h4><p>From 4-person pods to 200+ contractor teams — sized and structured for the problem at hand.</p></div>
 <div class="skc"><div class="ski">&#8599;</div><h4>Global Scale</h4><p>Deployed across 2,500+ locations in North America, Europe, and Asia.</p></div>
-<div class="skc"><div class="ski">&#9673;</div><h4>AI in Production</h4><p>Custom dictation and triage tools in regulated healthcare.</p></div>
+<div class="skc"><div class="ski">&#9673;</div><h4>Complex Environments</h4><p>Regulated industries, legacy systems, multi-stakeholder orgs. Built to navigate ambiguity.</p></div>
 </div></div></div></div></section>
 
 <section id="portfolio" class="s pf"><div class="w">
 <div class="se">Product Portfolio</div><h2 class="sh2">What's been <em>shipped</em></h2>
 
-<div class="pc an"><div class="pt"><div class="ptg">Consumer Mobile App</div><h3>Consumer Healthcare App</h3><p>Consumer mobile app for a 1,000+ location veterinary network. Check-in, document signing, Text to Pay digital checkout (powering $1B+ in payment collection), and 24/7 care access. 2M+ active users, 4.8-star rating.</p><div class="pn"><div><span class="v">2M+</span><span class="l">Active Users</span></div><div><span class="v">$1B+</span><span class="l">Payments Processed</span></div><div><span class="v">4.8&#9733;</span><span class="l">App Store Rating</span></div></div></div>
+<!-- Consumer App + Stripe Partnership -->
+<div class="pc an"><div class="pt"><span class="ip-tag">Stripe Partnership</span><span class="ip-tag">Featured at Stripe Sessions</span><div class="ptg">Consumer Mobile App &amp; Embedded Payments</div><h3>Consumer Healthcare App &amp; Text to Pay</h3><p>Consumer mobile app for a 1,000+ location veterinary network. Check-in, document signing, 24/7 care access, and an embedded payment gateway built in partnership with Stripe. Text to Pay powered $1B+ in digital payment collection across the network. The integration was featured at Stripe Sessions, the company's annual kickoff hosted by CEO Patrick Collison.</p><div class="pn"><div><span class="v">2M+</span><span class="l">Active Users</span></div><div><span class="v">$1B+</span><span class="l">Payments via Stripe</span></div><div><span class="v">4.8&#9733;</span><span class="l">App Store Rating</span></div></div></div>
 <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/29c98f01-9696-4ad4-a6d2-28f03ebef127/myvca-1.jpg" alt="myVCA" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/d553794d-a360-45c9-b5b5-35a8f90de84a/myvca-2.jpg" alt="myVCA" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/b1a24247-615c-465a-a4af-dbc7aea42ccd/myvca-4.jpg" alt="myVCA" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/faaae44c-9df9-4627-9524-913c66503bba/myvca-4+%281%29.jpg" alt="myVCA" loading="lazy"></div></div></div>
 
-<div class="pc an"><div class="pt"><span class="ip-tag">Built 0 to 1</span><span class="ip-tag">Proprietary IP</span><div class="ptg">AI-Powered Internal Tool</div><h3>AI Medical Dictation</h3><p>Off-the-shelf transcription could not handle veterinary medical records, so the team built a custom dictation system from scratch. Clinicians speak, the system transcribes, and structured SOAP notes push into the practice management system. Cut documentation time by 90%, improved efficiency by 30%. Concept to production in 6 weeks. 1.5M+ dictations processed. Created real IP value for the organization.</p><div class="pn"><div><span class="v">1.5M+</span><span class="l">Dictations</span></div><div><span class="v">30%</span><span class="l">Efficiency Gain</span></div><div><span class="v">6 wks</span><span class="l">Concept to Launch</span></div></div></div>
-<div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/52c4c0f5-494d-4a0a-b471-40533a7a1678/scribe+-+1.jpg" alt="Scribe" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/cb27256c-121c-4db8-ab77-2e00219b07e9/scribe+-+2.jpg" alt="Scribe" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/be26933b-e195-44c9-8c71-673f638a1f54/scribe+-+3.jpg" alt="Scribe" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/63ee0a82-1c52-4c4d-9b60-a5919a0a4350/scribe+-+4.jpg" alt="Scribe" loading="lazy"></div></div></div>
+<!-- Stripe Sessions Video Callout -->
+<div class="stripe-callout an">
+<video controls preload="metadata"><source src="stripe-sessions-keynote.mp4" type="video/mp4"></video>
+<div class="stripe-info">
+<div class="se">Industry Partnership</div>
+<h3>Featured at Stripe Sessions</h3>
+<p>The embedded payment gateway was highlighted at Stripe Sessions, Stripe's annual kickoff hosted by CEO Patrick Collison. A real-world example of partnering with industry leaders to solve problems at scale and make experiences better for millions of people.</p>
+<a href="https://www.linkedin.com/posts/abealmurjan_vcalife-marspetcare-innovation-activity-6811062137931362304--vDX/" target="_blank">See the LinkedIn post &rarr;</a>
+</div>
+</div>
 
+<!-- Telehealth -->
 <div class="pc an"><div class="pt"><div class="ptg">Virtual Care Platform</div><h3>Telehealth &amp; Live Chat</h3><p>In-app teletriage chat launched in 2018, expanded to full video and 24/7 access in 2020. Works across web and mobile, pulls real-time data from medical records. Available to 1M+ clients.</p><div class="pn"><div><span class="v">1M+</span><span class="l">Clients</span></div><div><span class="v">24/7</span><span class="l">Access</span></div><div><span class="v">4.8&#9733;</span><span class="l">Satisfaction</span></div></div></div>
 <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/01657c15-227d-4558-a55d-fd1d7c59a0f1/telehealth-1.jpg" alt="Telehealth" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/710bce2c-bdc2-451e-9846-2974f70ce605/telehealth-2.jpg" alt="Telehealth" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/2246e5d4-91f3-4d9a-9ef6-d92face85ead/telehealth-3.jpg" alt="Telehealth" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/9fa280a2-e1c6-49ae-a83e-1bbbef890caa/telehealth-4.jpg" alt="Telehealth" loading="lazy"></div></div></div>
 
+<!-- AI Medical Dictation -->
+<div class="pc an"><div class="pt"><span class="ip-tag">Built 0 to 1</span><span class="ip-tag">Proprietary IP</span><div class="ptg">AI-Powered Internal Tool</div><h3>AI Medical Dictation</h3><p>Off-the-shelf transcription could not handle veterinary medical records, so the team built a custom dictation system from scratch. Clinicians speak, the system transcribes, and structured SOAP notes push into the practice management system. Cut documentation time by 90%, improved efficiency by 30%. Concept to production in 6 weeks. 1.5M+ dictations processed. Created real IP value for the organization.</p><div class="pn"><div><span class="v">1.5M+</span><span class="l">Dictations</span></div><div><span class="v">30%</span><span class="l">Efficiency Gain</span></div><div><span class="v">6 wks</span><span class="l">Concept to Launch</span></div></div></div>
+<div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/52c4c0f5-494d-4a0a-b471-40533a7a1678/scribe+-+1.jpg" alt="Scribe" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/cb27256c-121c-4db8-ab77-2e00219b07e9/scribe+-+2.jpg" alt="Scribe" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/be26933b-e195-44c9-8c71-673f638a1f54/scribe+-+3.jpg" alt="Scribe" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/63ee0a82-1c52-4c4d-9b60-a5919a0a4350/scribe+-+4.jpg" alt="Scribe" loading="lazy"></div></div></div>
+
+<!-- Staff Enablement -->
 <div class="pc an"><div class="pt"><div class="ptg">Operational Efficiency</div><h3>Staff Enablement &amp; Direct Messaging</h3><p>Mobile staff platform paired with 2-way SMS for client communication. Launched in 2014. Gave clients instant access to their care team while keeping employee phone numbers private. Replaced paper workflows across the full network.</p><div class="pn"><div><span class="v">5M+</span><span class="l">Engagements</span></div><div><span class="v">75M+</span><span class="l">Messages</span></div><div><span class="v">10M+</span><span class="l">Forms Eliminated</span></div></div></div>
 <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7a638a63-9496-4127-8825-15e18438d58d/companion-1.jpg" alt="Staff" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/71581fce-b299-4e2f-8cc6-d25b03e322b5/sms-1.jpg" alt="SMS" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f92b351c-a683-44e1-b590-76fa7eec72fa/sms-2.jpg" alt="SMS" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/bd249175-3787-4866-86fe-2ddf991a2b37/sms-3.jpg" alt="SMS" loading="lazy"></div></div></div>
 
+<!-- Virtual Waiting Room -->
 <div class="pc an"><div class="pt"><span class="ip-tag">Built 0 to 1</span><span class="ip-tag">Proprietary IP</span><div class="ptg">ER &amp; Urgent Care</div><h3>Virtual Waiting Room</h3><p>No off-the-shelf queue system fit emergency veterinary care, so this was built from scratch. Entirely automated: clients check in digitally, get real-time wait estimates, and flow to reception without a phone call. Tens of thousands of phoneless placements. 150+ clinics. Created proprietary IP, drove 20% revenue lift.</p><div class="pn"><div><span class="v">150+</span><span class="l">Clinics</span></div><div><span class="v">20%</span><span class="l">Revenue Lift</span></div><div><span class="v">Automated</span><span class="l">Phoneless</span></div></div></div>
 <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/4c434f2b-fb19-4f47-b7e1-75c6f1a9f84d/urgent-1.jpg" alt="VWR" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1705092307180-P9QXHGG8ZNW7TRFNU02X/urgent-4%2B%25281%2529.jpg" alt="VWR" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/f5b30b68-4834-4c73-b0b8-197f70487a7b/image000001.jpg" alt="VWR" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/4c434f2b-fb19-4f47-b7e1-75c6f1a9f84d/urgent-1.jpg" alt="VWR" loading="lazy"></div></div></div>
 
+<!-- Student Concierge -->
 <div class="pc an"><div class="pt"><div class="ptg">Talent Pipeline</div><h3>Student Concierge</h3><p>Placement platform for veterinary externs. Replaced manual coordination with centralized matching. Integrated with Workday and ServiceNow. 80% placement rate, 45% hire conversion.</p><div class="pn"><div><span class="v">2,000+</span><span class="l">Placed</span></div><div><span class="v">80%</span><span class="l">Placement</span></div><div><span class="v">45%</span><span class="l">Hire Rate</span></div></div></div>
 <div class="pg"><div class="gr"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/ef1ddd55-8b06-459f-a577-f4850690d033/student+-+4.jpg" alt="Student" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/1530ba7a-d921-4d92-b953-47808d4c618e/student+-+5.jpg" alt="Student" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/e3a3a981-19c7-4c31-8bac-e89a0756f7c3/student+-+6.jpg" alt="Student" loading="lazy"><img src="https://images.squarespace-cdn.com/content/v1/6272e701b833b942c882586c/7c00dc03-e704-496f-9070-4236f1510407/student+-+3.jpg" alt="Student" loading="lazy"></div></div></div>
 </div></section>
 
+<section id="speaking" class="s" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="w">
+<div class="se">On Stage &amp; In the Field</div><h2 class="sh2">Speaking &amp; <em>Engagements</em></h2>
+
+<div class="eng-grid an">
+<img src="National_Conference_Keynote.jpg" alt="National Conference Keynote">
+<img src="Product_Hackathon.jpg" alt="Product Hackathon">
+<img src="core_team.jpg" alt="Core team at VCA Awards">
+<img src="Speaking_at_university_engagement_students.jpg" alt="University engagement">
+<img src="mars_make_the_difference_award.jpg" alt="Mars Make the Difference Award">
+<img src="Recording_session.jpg" alt="Recording session">
+</div>
+
+<p class="an" style="font-size:.88rem;color:var(--c2);line-height:1.7;max-width:640px;margin-top:20px">Conference keynotes, product hackathons, university guest lectures, on-camera interviews, and team onboarding sessions across 18 states.</p>
+
+<!-- The fun part -->
+<div class="vid-wrap an" style="margin-top:28px">
+<video controls preload="metadata"><source src="product-launch-video.mp4" type="video/mp4"></video>
+<div class="vid-cap" style="background:linear-gradient(135deg,var(--bg3),#1e1a24)">
+<h4 style="font-size:1.1rem">The Best Part of the Job &#127881;</h4>
+<p style="font-size:.88rem;color:var(--c2);line-height:1.6">Roadmaps and strategy are great, but this is what actually fills the cup — getting on stage with the associate leaders who make everything run, celebrating their wins, and making sure they know it. From accountability to celebration, the culture is the product. Build great things with great people, have fun doing it, and never let anyone forget their work matters.</p>
+</div>
+</div>
+
+</div></section>
+
 <section id="experience" class="s"><div class="w">
-<div class="se">Career Journey</div><h2 class="sh2">18 years of <em>growth</em></h2>
+<div class="se">Career Journey</div><h2 class="sh2">Every role <em>earned</em></h2>
 <div class="tl an">
-<div class="ti"><div class="td">2024 – Present</div><h3>Global VP of Product</h3><h4>Mars Veterinary Health, CA / NY / FL / Europe / Asia</h4><p>Global digital product platform across 2,500+ hospitals and 70,000+ associates. $150M+ annual portfolio. 62-person team. AI integration cut admin workload by 30%. Rebuilt the global product org, brought in agile delivery, set up cross-regional governance.</p></div>
+<div class="ti"><div class="td">2024 – Present</div><h3>Global VP of Product</h3><h4>Mars Veterinary Health, CA / NY / FL / Europe / Asia</h4><p>Global digital product platform across 2,500+ hospitals and 70,000+ associates. $150M+ annual portfolio. Teams ranging from focused product pods to a 200+ person cross-functional org including contractors. AI integration cut admin workload by 30%. Rebuilt the global product org, brought in agile delivery, set up cross-regional governance.</p></div>
 <div class="ti"><div class="td">2021 – 2024</div><h3>Vice President, Digital Product</h3><h4>VCA Inc, Santa Monica, CA</h4><p>Digital transformation across 1,200+ hospitals, touching care for 5 million clients. Built product and engineering from the ground up. Owned team scaling, budget, and executive strategy.</p></div>
 <div class="ti"><div class="td">2021 – 2022</div><h3>Senior Director, Digital Innovation</h3><h4>VCA Inc, CA / CO</h4><p>Built the automated queue system for urgent care. 20% revenue lift. Relaunched digital platforms to 50% adoption.</p></div>
 <div class="ti"><div class="td">2019 – 2021</div><h3>Director, Digital Innovation</h3><h4>VCA Animal Hospitals, CA / CO</h4><p>Scaled the digital experience across 1,000+ hospitals. Launched the consumer app and Text to Pay ($1B+ in payments). Led the pandemic response: telehealth deployed network-wide.</p></div>
@@ -175,36 +217,6 @@ a{color:inherit}
 <div class="tools-grid"><span class="tool">Product Strategy</span><span class="tool">Agile / Scrum</span><span class="tool">Jira</span><span class="tool">Figma</span><span class="tool">Adobe Creative Suite</span><span class="tool">GitHub</span><span class="tool">ServiceNow</span><span class="tool">Workday</span><span class="tool">Keynote / PowerPoint</span><span class="tool">Public Speaking</span><span class="tool">Executive Presentations</span><span class="tool">AI/ML Product Development</span></div>
 </div></div></section>
 
-<section id="speaking" class="s" style="background:var(--bg2);border-top:1px solid var(--line)"><div class="w">
-<div class="se">On Stage &amp; In the Field</div><h2 class="sh2">Speaking &amp; <em>Engagements</em></h2>
-
-<div class="eng-grid an">
-<img src="National_Conference_Keynote.jpg" alt="National Conference Keynote">
-<img src="Local_team_onboarding.jpg" alt="Local team onboarding">
-<img src="Product_Hackathon.jpg" alt="Product Hackathon">
-<img src="Product_L.jpg" alt="Product launch event">
-<img src="core_team.jpg" alt="Core team at VCA Awards">
-<img src="A_day_at_the_desk.jpg" alt="A day at the desk">
-<img src="Speaking_at_university_engagement_students.jpg" alt="University engagement">
-<img src="mars_make_the_difference_award.jpg" alt="Mars Make the Difference Award">
-<img src="Recording_session.jpg" alt="Recording session">
-<img src="Processing_Shipments_-_ground_floor_work.jpg" alt="Processing shipments">
-</div>
-
-<p class="an" style="font-size:.88rem;color:var(--c2);line-height:1.7;max-width:640px;margin-top:20px">National conference keynotes to warehouse floor work. Product hackathons, university guest lectures, on-camera interviews, and team onboarding sessions across 18 states.</p>
-
-<div class="vid-wrap an" style="margin-top:28px"><video controls preload="metadata"><source src="product-launch-video.mp4" type="video/mp4"></video><div class="vid-cap"><h4>Product Vision &amp; Roadmap</h4><p>Internal product presentation session</p></div></div>
-
-<div class="stripe-callout an">
-<video controls preload="metadata"><source src="stripe-sessions-keynote.mp4" type="video/mp4"></video>
-<div class="stripe-info">
-<div class="se">Featured Partnership</div>
-<h3>Stripe Sessions Keynote</h3>
-<p>The embedded payment gateway built for the consumer app was featured at Stripe Sessions, the company's annual kickoff hosted by CEO Patrick Collison. The integration powered Text to Pay and in-app checkout across 1,000+ locations.</p>
-<a href="https://www.linkedin.com/posts/abealmurjan_vcalife-marspetcare-innovation-activity-6811062137931362304--vDX/" target="_blank">See the LinkedIn post &rarr;</a>
-</div>
-</div>
-</div></section>
 
 <section id="refs" class="s"><div class="w">
 <div class="se">References</div><h2 class="sh2">What colleagues <em>say</em></h2>
@@ -220,12 +232,12 @@ a{color:inherit}
 <div class="se" style="justify-content:center">Contact</div>
 <h2 class="sh2" style="text-align:center">Open to the next <em>product challenge</em></h2>
 <p class="ct-s">Available for global product leadership opportunities.</p>
-<div class="ct-b"><a href="/cdn-cgi/l/email-protection#5f3e3d3a3e33322a2d353e311f38323e3633713c3032" class="bg"><span class="__cf_email__" data-cfemail="5e3f3c3b3f32332b2c343f301e39333f3732703d3133">[email&#160;protected]</span></a><a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="bo">LinkedIn Profile</a></div>
+<div class="ct-b"><a href="mailto:abealmurjan@gmail.com" class="bg">Let's Connect</a><a href="https://www.linkedin.com/in/abealmurjan/" target="_blank" class="bo">LinkedIn Profile</a></div>
 </div></div></section>
 
 <footer class="ft"><div class="w"><p>&copy; 2026 Ibrahim Al-Murjan</p></div></footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const b=document.getElementById('nb'),o=document.getElementById('no');
 b.addEventListener('click',()=>{b.classList.toggle('on');o.classList.toggle('on');document.body.style.overflow=o.classList.contains('on')?'hidden':'';});
 o.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.classList.remove('on');o.classList.remove('on');document.body.style.overflow='';}));
