@@ -319,11 +319,14 @@ o.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{b.classList.r
 document.querySelectorAll('.viz-ph').forEach(img=>{const w=document.createElement('div');w.className='viz-ph-wrap '+(img.classList.contains('l')?'l':img.classList.contains('m')?'m':'r');img.parentNode.insertBefore(w,img);w.appendChild(img);img.classList.remove('l','m','r');});
 document.querySelectorAll('.an').forEach(el=>new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vi')})},{threshold:0.08}).observe(el));
 const lb=document.getElementById('lb'),lbi=document.getElementById('lbi');
-document.querySelectorAll('.eng-mosaic img, .hr-ph img').forEach(img=>{img.style.cursor='pointer';img.addEventListener('click',()=>{lbi.src=img.src;lbi.alt=img.alt;lb.classList.add('on');document.body.style.overflow='hidden';});});
-function closeLb(){lb.classList.remove('on');document.body.style.overflow='';lbi.src='';}
-document.getElementById('lbx').addEventListener('click',closeLb);
-lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+let lbHistoryPushed=false;
+function openLb(src,alt){lbi.src=src;lbi.alt=alt;lb.classList.add('on');document.body.style.overflow='hidden';try{history.pushState({lightbox:true},'');lbHistoryPushed=true;}catch(e){}}
+function closeLb(fromPopstate){lb.classList.remove('on');document.body.style.overflow='';lbi.src='';if(lbHistoryPushed&&!fromPopstate){lbHistoryPushed=false;try{history.back();}catch(e){}}else{lbHistoryPushed=false;}}
+document.querySelectorAll('.eng-mosaic img, .hr-ph img').forEach(img=>{img.style.cursor='pointer';img.addEventListener('click',()=>openLb(img.src,img.alt));});
+document.getElementById('lbx').addEventListener('click',()=>closeLb(false));
+lb.addEventListener('click',function(e){if(e.target===lb)closeLb(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('on'))closeLb(false);});
+window.addEventListener('popstate',function(){if(lb.classList.contains('on'))closeLb(true);});
 </script>
 </body>
 </html>
